@@ -5,7 +5,6 @@ import improbable.fapi.network.RakNetLinkSettings
 import improbable.unity.fabric.AuthoritativeEntityOnly
 import improbable.unity.fabric.bridge.FSimAssetContextDiscriminator
 import improbable.unity.fabric.engine.EnginePlatform
-import improbable.unity.fabric.engine.EnginePlatform._
 import improbable.unity.fabric.satisfiers.SatisfyPhysics
 
 object UnityFSimBridgeSettings extends BridgeSettingsResolver {
@@ -21,7 +20,7 @@ object UnityFSimBridgeSettings extends BridgeSettingsResolver {
   )
 
   override def engineTypeToBridgeSettings(engineType: String, metadata: String): Option[BridgeSettings] = {
-    if (engineType == UNITY_FSIM_ENGINE) {
+    if (engineType == EnginePlatform.UNITY_FSIM_ENGINE) {
       Some(fSimEngineBridgeSettings)
     } else {
       None

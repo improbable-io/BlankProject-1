@@ -3,7 +3,6 @@ package improbable.launcher
 import improbable.bridgesettings.{UnityClientBridgeSettings, UnityFSimBridgeSettings}
 import improbable.dapi.LaunchConfig
 import improbable.fapi.bridge.CompositeBridgeSettingsResolver
-import improbable.fapi.engine.CompositeEngineDescriptorResolver
 import improbable.papi.worldapp.WorldApp
 import improbable.unity.fabric.engine.DownloadableUnityConstraintToEngineDescriptorResolver
 

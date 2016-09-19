@@ -1,0 +1,28 @@
+{
+  "javaparams": [
+    {
+      "name": "-DCLOUD_LAUNCH_CONFIG",
+      "value": "improbable.launcher.AutomaticWorkerStartup"
+    }
+  ],
+
+  "flagz": [
+    {
+      "name": "entity_activator",
+      "value": "improbable.corelib.entity.CoreLibraryEntityActivator"
+    },
+    {
+      "name": "game_world_edge_length",
+      "value": "16000"
+    }
+  ],
+
+  "worker_flagz": [
+    {
+      "worker_type": "gsim",
+      "flagz": [
+      ]
+    }
+  ]
+}
+

@@ -1,6 +1,7 @@
 #Improbable Unity Ignores
 build.json
 .invoke.log
+zip_toolbelt.log
 Improbable.meta
 Assets/Improbable
 Assets/Plugins/Improbable

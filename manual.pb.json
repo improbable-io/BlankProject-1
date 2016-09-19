@@ -1,0 +1,24 @@
+{
+  "javaparams": [
+    {
+      "name": "-DCLOUD_LAUNCH_CONFIG",
+      "value": "improbable.launcher.ManualWorkerStartup"
+    }
+  ],
+
+  "flagz": [
+    {
+      "name": "entity_activator",
+      "value": "improbable.corelib.entity.CoreLibraryEntityActivator"
+    }
+  ],
+
+  "worker_flagz": [
+    {
+      "worker_type": "gsim",
+      "flagz": [
+      ]
+    }
+  ]
+}
+
