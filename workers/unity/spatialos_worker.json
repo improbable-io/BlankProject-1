@@ -9,7 +9,7 @@
 		},
 		"mac": {
 			"command": "open",
-			"arguments": ["./build/worker/UnityClient@Mac/UnityClient@Mac.app", "--args", "+assetDatabaseStrategy", "Local", "+localAssetDatabasePath", "${IMPROBABLE_PROJECT_ROOT}/build/assembly", "+appName", "${IMPROBABLE_PROJECT_NAME}"]
+			"arguments": ["-n", "./build/worker/UnityClient@Mac/UnityClient@Mac.app", "--args", "+assetDatabaseStrategy", "Local", "+localAssetDatabasePath", "${IMPROBABLE_PROJECT_ROOT}/build/assembly", "+appName", "${IMPROBABLE_PROJECT_NAME}"]
 		}
 	},
 	"fsim": {
