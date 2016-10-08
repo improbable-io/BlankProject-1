@@ -15,7 +15,7 @@ object Map extends NatureDescription {
   def apply(): NatureApplication = {
     application(
       states = Seq(),
-      natures = Seq(BaseNature(EntityPrefab("Map")), TransformNature(Vector3d.zero))
+      natures = Seq(BaseNature(EntityPrefab("Map"), isPhysical = false), TransformNature(Vector3d.zero))
     )
   }
 }

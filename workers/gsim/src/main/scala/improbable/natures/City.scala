@@ -19,7 +19,7 @@ object City extends NatureDescription {
   def apply(position: LatLonPosition, name: String, demand: Int): NatureApplication = {
     application(
       states = Seq(CityInfoComponent(name, demand, ArrowData(Vector3d.zero, 0))),
-      natures = Seq(BaseNature(GameSettings.cityPrefab), TransformNature(position.convertToVector()))
+      natures = Seq(BaseNature(GameSettings.cityPrefab, isPhysical = false), TransformNature(position.convertToVector()))
     )
   }
 }

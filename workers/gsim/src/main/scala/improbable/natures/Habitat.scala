@@ -18,7 +18,7 @@ object Habitat extends NatureDescription {
   def apply(position: LatLonPosition, name: String, population: Int): NatureApplication = {
     application(
       states = Seq(HabitatInfoComponent(name, population)),
-      natures = Seq(BaseNature(GameSettings.habitatPrefab), TransformNature(position.convertToVector()))
+      natures = Seq(BaseNature(GameSettings.habitatPrefab, isPhysical = false), TransformNature(position.convertToVector()))
     )
   }
 }

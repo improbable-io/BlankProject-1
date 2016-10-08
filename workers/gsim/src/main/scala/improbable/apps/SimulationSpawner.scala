@@ -109,12 +109,14 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
         logger.info("city demand received " + msg)
         cityReplies = cityReplies + (cityId -> demand)
         if (cityReplies.size == cities.size) {
+          logger.info("cities size: " + cities.size.toString)
           messagePoachers()
         }
     }
   }
 
   def messagePoachers(): Unit = {
+    logger.info("poachers size: " + poachers.size.toString)
     val demandPerPoacher = cityReplies.values.sum / poachers.size
 
     poachers.foreach {

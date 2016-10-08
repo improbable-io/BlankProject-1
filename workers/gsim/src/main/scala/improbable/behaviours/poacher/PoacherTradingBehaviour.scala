@@ -25,9 +25,10 @@ class PoacherTradingBehaviour(entity: Entity, world: World, logger: Logger, poac
 
     poacherInfo.bind.activity {
       activity =>
-        if (activity < GameSettings.minimumPoacherActivity)
-          poacherInfoComponentWriter.update.life(Life.Dead)
-        world.messaging.sendToApp(WorldAppDescriptor.forClass[SimulationSpawner].name, PoacherDead(entity.entityId))
+        if (activity < GameSettings.minimumPoacherActivity) {
+          poacherInfoComponentWriter.update.life(Life.Dead).finishAndSend()
+          world.messaging.sendToApp(WorldAppDescriptor.forClass[SimulationSpawner].name, PoacherDead(entity.entityId))
+        }
     }
 
     world.messaging.onReceive {

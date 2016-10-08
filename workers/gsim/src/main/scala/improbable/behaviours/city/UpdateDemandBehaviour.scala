@@ -18,7 +18,8 @@ class UpdateDemandBehaviour(entity: Entity, world: World, logger: Logger, cityIn
 
   override def onReady(): Unit = {
     world.messaging.onReceive {
-      case Trade(poacherPosition, numberOfElephants) =>
+      case msg@Trade(poacherPosition, numberOfElephants) =>
+        logger.info("trade received: " + msg)
         updateArrowData(poacherPosition, numberOfElephants)
       case RequestDemand =>
         world.messaging.sendToApp(WorldAppDescriptor.forClass[SimulationSpawner].name, CityDemand(entity.entityId, cityInfoComponent.demand.get))
