@@ -45,8 +45,7 @@ class PoacherTradingBehaviour(entity: Entity, world: World, logger: Logger, poac
 
   def poachFromHabitat(habitatId: EntityId, targetDemand: Int): Unit = {
     val poachingActivity = poacherInfoComponentWriter.activity
-    // essentially ignoreing targetDemand here
-    val poachingDemand = Math.max(targetDemand, poachingActivity)
+    val poachingDemand = Math.min(targetDemand, poachingActivity)
     world.messaging.sendToEntity(habitatId, PoachRequest(entity.entityId, poachingDemand))
     logger.info("sent poach request message")
   }
