@@ -1,9 +1,10 @@
 package improbable.natures
 
+import improbable.PositionUtils
+import improbable.apps.LatLonPosition
 import improbable.corelib.natures.{BaseNature, NatureApplication, NatureDescription}
 import improbable.corelibrary.transforms.TransformNature
-import improbable.habitat.PopulationComponent
-import improbable.math.Vector3d
+import improbable.habitat.HabitatInfoComponent
 import improbable.papi.entity.EntityPrefab
 import improbable.papi.entity.behaviour.EntityBehaviourDescriptor
 
@@ -15,10 +16,10 @@ object HabitatNature extends NatureDescription {
 
   )
 
-  def apply(position: Vector3d = Vector3d.zero): NatureApplication = {
+  def apply(position: LatLonPosition, name: String, population: Float): NatureApplication = {
     application(
-      states = Seq(PopulationComponent(0f)),
-      natures = Seq(BaseNature(EntityPrefab("Habitat")), TransformNature(position))
+      states = Seq(HabitatInfoComponent(name, population)),
+      natures = Seq(BaseNature(EntityPrefab("Habitat")), TransformNature(PositionUtils.convertToVector(position)))
     )
   }
 }

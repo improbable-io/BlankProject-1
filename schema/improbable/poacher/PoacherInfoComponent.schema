@@ -1,0 +1,6 @@
+package improbable.poacher;
+
+component PoacherInfoComponent {
+  string name = 1;
+  id = 1102;
+}

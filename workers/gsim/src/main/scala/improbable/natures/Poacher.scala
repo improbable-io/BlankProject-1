@@ -7,6 +7,7 @@ import improbable.corelib.natures.{BaseNature, NatureApplication, NatureDescript
 import improbable.corelibrary.transforms.TransformNature
 import improbable.papi.entity.EntityPrefab
 import improbable.papi.entity.behaviour.EntityBehaviourDescriptor
+import improbable.poacher.PoacherInfoComponent
 
 object Poacher extends NatureDescription {
 
@@ -18,7 +19,7 @@ object Poacher extends NatureDescription {
 
   def apply(position: LatLonPosition): NatureApplication = {
     application(
-      states = Seq(),
+      states = Seq(PoacherInfoComponent("")),
       natures = Seq(BaseNature(EntityPrefab("Poacher")), TransformNature(PositionUtils.convertToVector(position)))
     )
   }
