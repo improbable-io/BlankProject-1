@@ -15,7 +15,7 @@ object Habitat extends NatureDescription {
 
   )
 
-  def apply(position: LatLonPosition, name: String, population: Float): NatureApplication = {
+  def apply(position: LatLonPosition, name: String, population: Int): NatureApplication = {
     application(
       states = Seq(HabitatInfoComponent(name, population)),
       natures = Seq(BaseNature(EntityPrefab("Habitat")), TransformNature(position.convertToVector()))
