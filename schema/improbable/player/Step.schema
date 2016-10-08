@@ -1,0 +1,7 @@
+package;
+
+component Step.schema {
+  option queryable = false;
+  option synchronized = false;
+  id = 0;
+}
