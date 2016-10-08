@@ -1,7 +1,7 @@
 package improbable.apps
 
 import improbable.logging.Logger
-import improbable.natures.City
+import improbable.natures.{City, Habitat, Poacher}
 import improbable.papi.EntityId
 import improbable.papi.world.AppWorld
 import improbable.papi.world.messaging.CustomMsg
@@ -41,16 +41,15 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
   var habitats: Map[EntityId, LatLonPosition] = Map.empty
 
   spawnCities()
-  spawnPoachers()
+  //spawnPoachers()
   spawnHabitats()
   private var citiesRepliedSoFar: Map[EntityId, Int] = Map.empty
 
   private def spawnCities() = {
-    val positions = List(new LatLonPosition(52, 0))
-    positions.foreach {
-      position =>
-        val cityId = appWorld.entities.spawnEntity(City(position))
-        cities = cities + (cityId -> position)
+    SimulationSpawner.defaultCities.foreach {
+      city =>
+        val cityId = appWorld.entities.spawnEntity(City(new LatLonPosition(city._2(0), city._2(1)), city._1, city._2(2)))
+        cities = cities + (cityId -> new LatLonPosition(city._2(0), city._2(1)))
     }
   }
 
@@ -58,17 +57,16 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
     val positions = List(new LatLonPosition(39.9, 116.4))
     positions.foreach {
       position =>
-        val poacherId = appWorld.entities.spawnEntity(City(position))
+        val poacherId = appWorld.entities.spawnEntity(Poacher(position))
         poachers = poachers + (poacherId -> position)
     }
   }
 
   private def spawnHabitats() = {
-    val positions = List(new LatLonPosition(39.9, 116.4))
-    positions.foreach {
-      position =>
-        val habitatId = appWorld.entities.spawnEntity(City(position))
-        habitats = habitats + (habitatId -> position)
+    SimulationSpawner.defaultHabitats.foreach {
+      habitat =>
+        val habitatId = appWorld.entities.spawnEntity(Habitat(new LatLonPosition(habitat._2(0), habitat._2(1)), habitat._1, habitat._2(2)))
+        habitats = habitats + (habitatId -> new LatLonPosition(habitat._2(0), habitat._2(1)))
     }
   }
 

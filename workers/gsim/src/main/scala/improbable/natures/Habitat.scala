@@ -1,14 +1,13 @@
 package improbable.natures
 
-import improbable.PositionUtils
-import improbable.apps.LatLonPosition
 import improbable.corelib.natures.{BaseNature, NatureApplication, NatureDescription}
 import improbable.corelibrary.transforms.TransformNature
 import improbable.habitat.HabitatInfoComponent
 import improbable.papi.entity.EntityPrefab
 import improbable.papi.entity.behaviour.EntityBehaviourDescriptor
+import improbable.util.LatLonPosition
 
-object HabitatNature extends NatureDescription {
+object Habitat extends NatureDescription {
 
   override val dependencies = Set[NatureDescription](BaseNature, TransformNature)
 
@@ -19,7 +18,7 @@ object HabitatNature extends NatureDescription {
   def apply(position: LatLonPosition, name: String, population: Float): NatureApplication = {
     application(
       states = Seq(HabitatInfoComponent(name, population)),
-      natures = Seq(BaseNature(EntityPrefab("Habitat")), TransformNature(PositionUtils.convertToVector(position)))
+      natures = Seq(BaseNature(EntityPrefab("Habitat")), TransformNature(position.convertToVector()))
     )
   }
 }
