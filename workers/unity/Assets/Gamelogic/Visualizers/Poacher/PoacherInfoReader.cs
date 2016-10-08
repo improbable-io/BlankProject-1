@@ -8,7 +8,7 @@ namespace Assets.Gamelogic.Visualizers.Poacher {
 		[Require] public PoacherInfoComponentReader PoacherInfoComponentReader;
 		public string Name;
 
-		void OnReady() 
+		void OnEnable() 
 		{
 			Name = PoacherInfoComponentReader.Name;
 		}

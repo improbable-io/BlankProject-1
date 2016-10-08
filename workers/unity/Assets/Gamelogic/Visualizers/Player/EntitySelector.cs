@@ -17,20 +17,23 @@ namespace Assets.Gamelogic.Visualizers.Player
 
 		void Update () 
 		{
-			
 			if (Input.GetMouseButtonDown(0))
 			{
 				RaycastHit hit;
 				Ray ray = PlayerCamera.ScreenPointToRay(Input.mousePosition);
 				if (Physics.Raycast(ray.origin, ray.direction, out hit))
 				{
-					if (hit.collider.gameObject.IsEntityObject())
+                    Debug.Log("1");
+                    if (hit.collider.gameObject.IsEntityObject())
 					{
+                        Debug.Log("2");
 						GameObject newSelection = hit.collider.gameObject;
 						if (newSelection != CurrentSelection)
 						{
-							DeselectCurrent();
+                            Debug.Log("3");
+                            DeselectCurrent();
 							CurrentSelection = newSelection;
+                            SelectEntity(CurrentSelection);
 						}
 					}
 					else

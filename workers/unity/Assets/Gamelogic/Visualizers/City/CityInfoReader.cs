@@ -9,7 +9,7 @@ namespace Assets.Gamelogic.Visualizers.City {
 		public string Name;
 		public float Demand;
 
-		void OnReady() 
+		void OnEnable() 
 		{
 			Name = CityInfoComponentReader.Name;
 			CityInfoComponentReader.DemandUpdated += OnDemandUpdated;
@@ -26,4 +26,4 @@ namespace Assets.Gamelogic.Visualizers.City {
 			transform.localScale = new Vector3 (Demand, 1f, Demand);
 		}
 	}
-}
+}   

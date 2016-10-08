@@ -3,21 +3,23 @@ using Improbable.Habitat;
 using Improbable.Unity.Visualizer;
 
 namespace Assets.Gamelogic.Visualizers.Habitat {
-	public class HabitatInfoReader : MonoBehaviour {
 
-		[Require] public HabitatInfoComponentReader HabitatInfoComponentReader;
+    public class HabitatInfoReader : MonoBehaviour {
+
+		[Require] private HabitatInfoComponentReader habitatInfoComponentReader;
 		public string Name;
 		public int Population;
 
-		void OnReady() 
+		void OnEnable()
 		{
-			Name = HabitatInfoComponentReader.Name;
-			HabitatInfoComponentReader.PopulationUpdated += OnPopulationUpdated;
+			Name = habitatInfoComponentReader.Name;
+            Debug.Log("Name:" + Name);
+			habitatInfoComponentReader.PopulationUpdated += OnPopulationUpdated;
 		}
 
 		void OnDisable()
 		{
-			HabitatInfoComponentReader.PopulationUpdated -= OnPopulationUpdated;
+			habitatInfoComponentReader.PopulationUpdated -= OnPopulationUpdated;
 		}
 
 		void OnPopulationUpdated(int p)
