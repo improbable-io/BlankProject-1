@@ -1,11 +1,10 @@
 package improbable.natures
 
-import improbable.PositionUtils
-import improbable.apps.LatLonPosition
 import improbable.corelib.natures.{BaseNature, NatureApplication, NatureDescription}
 import improbable.corelibrary.transforms.TransformNature
 import improbable.papi.entity.EntityPrefab
 import improbable.papi.entity.behaviour.EntityBehaviourDescriptor
+import improbable.util.LatLonPosition
 
 object City extends NatureDescription {
 
@@ -16,7 +15,7 @@ object City extends NatureDescription {
   def apply(position: LatLonPosition): NatureApplication = {
     application(
       states = Seq(),
-      natures = Seq(BaseNature(EntityPrefab("City")), TransformNature(PositionUtils.convertToVector(position)))
+      natures = Seq(BaseNature(EntityPrefab("City")), TransformNature(position.convertToVector()))
     )
   }
 }
