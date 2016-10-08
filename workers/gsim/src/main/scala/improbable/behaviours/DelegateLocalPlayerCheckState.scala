@@ -1,4 +1,4 @@
-package improbable
+package improbable.behaviours
 
 import improbable.corelib.util.EntityOwnerDelegation.entityOwnerDelegation
 import improbable.logging.Logger

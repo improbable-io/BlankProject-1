@@ -1,6 +1,6 @@
 package improbable.natures
 
-import improbable.DelegateLocalPlayerCheckState
+import improbable.behaviours.{ClientSidePosition, DelegateLocalPlayerCheckState}
 import improbable.corelib.natures.{BaseNature, NatureApplication, NatureDescription}
 import improbable.corelib.util.EntityOwner
 import improbable.corelibrary.transforms.TransformNature
@@ -15,13 +15,15 @@ object Player extends NatureDescription {
   override val dependencies = Set[NatureDescription](BaseNature, TransformNature)
 
   override def activeBehaviours: Set[EntityBehaviourDescriptor] = Set(
-    descriptorOf[DelegateLocalPlayerCheckState]
+    descriptorOf[DelegateLocalPlayerCheckState],
+    descriptorOf[ClientSidePosition]
+
   )
 
   def apply(clientId: EngineId): NatureApplication = {
     application(
       states = Seq(EntityOwner(Some(clientId)), LocalPlayerCheck()),
-      natures = Seq(BaseNature(EntityPrefab("Player")), TransformNature(Vector3d(0,5,0)))
+      natures = Seq(BaseNature(EntityPrefab("Player")), TransformNature(Vector3d(0, 5, 0)))
     )
   }
 }
