@@ -47,7 +47,7 @@ class ClientEntityLifeCycleManager(appWorld: AppWorld, logger: Logger) extends W
     clientIdToEntityIdMap.get(clientId) match {
       case Some(entityId) =>
         appWorld.entities.destroyEntity(entityId)
-        logger.info(s"Client $clientId has disconnect. Destroyed entity $entityId")
+        logger.info(s"ClientId $clientId has disconnect. Destroyed entity $entityId")
         clientIdToEntityIdMap -= clientId
       case None =>
         logger.warn(s"User disconnected but could not find entity id for player: $clientId")

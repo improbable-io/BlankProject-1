@@ -1,6 +1,6 @@
 package improbable.launcher
 
-import improbable.apps.ClientEntityLifeCycleManager
+import improbable.apps.{ClientEntityLifeCycleManager, MapSpawner}
 import improbable.bridgesettings.{UnityClientBridgeSettings, UnityFSimBridgeSettings}
 import improbable.dapi.LaunchConfig
 import improbable.fapi.bridge.CompositeBridgeSettingsResolver
@@ -21,7 +21,10 @@ object AutomaticWorkerStartup extends SimulationLaunchConfigWithApps(dynamically
   * Use this class to specify the list of apps you want to run when the game starts.
   */
 class SimulationLaunchConfigWithApps(dynamicallySpoolUpWorkers: Boolean) extends
-  SimulationLaunchConfig(appsToStart = Seq(classOf[ClientEntityLifeCycleManager]), dynamicallySpoolUpWorkers)
+  SimulationLaunchConfig(appsToStart = Seq(
+    classOf[ClientEntityLifeCycleManager],
+    classOf[MapSpawner]),
+    dynamicallySpoolUpWorkers)
 
 class SimulationLaunchConfig(appsToStart: Seq[Class[_ <: WorldApp]],
                              dynamicallySpoolUpWorkers: Boolean) extends LaunchConfig(
