@@ -11,7 +11,7 @@ public class TriggerStepBehaviour : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            playerControlsWriter.Update.TriggerTriggerStep().FinishAndSend();
+            playerControlsWriter.Update.TriggerStep().FinishAndSend();
         }
     }
 }

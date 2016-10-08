@@ -20,7 +20,7 @@ namespace Assets.Gamelogic.Visualizers.City {
 			CityInfoComponentReader.DemandUpdated -= OnDemandUpdated;
 		}
 
-		void OnDemandUpdated(float d)
+		void OnDemandUpdated(int d)
 		{
 			Demand = d;
 			transform.localScale = new Vector3 (Demand, 1f, Demand);
