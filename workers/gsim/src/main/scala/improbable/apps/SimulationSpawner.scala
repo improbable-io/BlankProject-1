@@ -6,13 +6,27 @@ import improbable.papi.EntityId
 import improbable.papi.world.AppWorld
 import improbable.papi.world.messaging.CustomMsg
 import improbable.papi.worldapp.WorldApp
-
-case class LatLonPosition(lat: Double, lon: Double)
+import improbable.util.LatLonPosition
 
 case object StepRequest extends CustomMsg
 
 case object Step extends CustomMsg
 
+
+case object RequestDemand extends CustomMsg
+
+case class DemandStatusResponse(cityId: EntityId, demand: Int) extends CustomMsg
+
+case object RequestSupplyStatus extends CustomMsg
+
+case class SupplyStatusResponse(supply: Int) extends CustomMsg
+
+case class KillElephants(trade: Int) extends CustomMsg
+
+case class CreateSupply(trade: Int) extends CustomMsg
+
+
+case class PoacherMessage(targetHabitatId: EntityId, targetDemand: Int) extends CustomMsg
 
 class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
 
@@ -24,20 +38,24 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
 
   var cities: Map[EntityId, LatLonPosition] = Map.empty
   var poachers: Map[EntityId, LatLonPosition] = Map.empty
+  var habitats: Map[EntityId, LatLonPosition] = Map.empty
 
   spawnCities()
   spawnPoachers()
+  spawnHabitats()
+  private var citiesRepliedSoFar: Map[EntityId, Int] = Map.empty
 
   private def spawnCities() = {
-    SimulationSpawner.cities.foreach {
-      city =>
+    val positions = List(new LatLonPosition(52, 0))
+    positions.foreach {
+      position =>
         val cityId = appWorld.entities.spawnEntity(City(position))
         cities = cities + (cityId -> position)
     }
   }
 
   private def spawnPoachers() = {
-    val positions = List(LatLonPosition(39.9, 116.4))
+    val positions = List(new LatLonPosition(39.9, 116.4))
     positions.foreach {
       position =>
         val poacherId = appWorld.entities.spawnEntity(City(position))
@@ -45,37 +63,39 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
     }
   }
 
-  private def step(): Unit = {
-    cities.keys.foreach(cityId => appWorld.messaging.sendToEntity(cityId, Step))
-    poachers.keys.foreach(poacherId => appWorld.messaging.sendToEntity(poacherId, Step))
+  private def spawnHabitats() = {
+    val positions = List(new LatLonPosition(39.9, 116.4))
+    positions.foreach {
+      position =>
+        val habitatId = appWorld.entities.spawnEntity(City(position))
+        habitats = habitats + (habitatId -> position)
+    }
   }
 
-  //  private var citiesRepliedSoFar: Map[EntityId, Int] = Map.empty
-  //  private var cities: Set[EntityId] = Set.empty
-  //  private var habitats: Set[EntityId] = Set.empty
-  //  private var habitatsRepliedSoFar: List[Int] = List()
-  //
-  //  override def onReady(): Unit = {
-  //    world.messaging.onReceive {
-  //      case DemandStatusResponse(cityId, demand) =>
-  //        citiesRepliedSoFar = citiesRepliedSoFar + (cityId -> demand)
-  //        if (gotAllResponses) {
-  //          calculateThing()
-  //        }
-  //
-  //      case SupplyStatusResponse(supply) =>
-  //        habitatsRepliedSoFar = habitatsRepliedSoFar.+:(supply)
-  //        if (gotAllResponses) {
-  //          calculateThing()
-  //        }
-  //    }
-  //
-  //    //    findCitiesAndHabitats()
-  //    //    step()
-  //  }
-  //
-  //  private def gotAllResponses: Boolean = citiesRepliedSoFar.size == cities.size && habitatsRepliedSoFar.size == habitats.size
-  //
+
+  private def step(): Unit = {
+    cities.keys.foreach(cityId => appWorld.messaging.sendToEntity(cityId, RequestDemand))
+  }
+
+  appWorld.messaging.onReceive {
+    case DemandStatusResponse(cityId, demand) =>
+      citiesRepliedSoFar = citiesRepliedSoFar + (cityId -> demand)
+      if (citiesRepliedSoFar.size == cities.size) {
+        messagePoachers()
+      }
+  }
+
+  private def messagePoachers(): Unit = {
+    val demandPerPoacher = citiesRepliedSoFar.values.sum / poachers.size
+
+    poachers.foreach {
+      case (poacherId, poacherPosition) =>
+        val nearestHabitat = habitats.minBy { case (_, habitatPosition) => habitatPosition.distanceTo(poacherPosition) }._1
+        appWorld.messaging.sendToEntity(poacherId, PoacherMessage(nearestHabitat, demandPerPoacher))
+    }
+    citiesRepliedSoFar = Map.empty
+  }
+
   //  private def calculateThing() = {
   //    val totalDemand = citiesRepliedSoFar.values.sum
   //    val totalSupply = habitatsRepliedSoFar.sum
