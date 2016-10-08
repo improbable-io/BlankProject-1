@@ -1,7 +1,8 @@
-package;
+package improbable.player;
 
-component Step.schema {
-  option queryable = false;
-  option synchronized = false;
-  id = 0;
+type Trigger {}
+
+component Step{
+  event Trigger trigger;
+  id = 1002;
 }

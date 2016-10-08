@@ -26,20 +26,20 @@ class PoacherTradingBehaviour(entity: Entity, world: World, logger: Logger) exte
   private var habitatsRepliedSoFar: List[Int] = List()
 
   override def onReady(): Unit = {
-//    world.messaging.onReceive {
-//      case DemandStatusResponse(cityId, demand) =>
-//        citiesRepliedSoFar = citiesRepliedSoFar + (cityId -> demand)
-//        if (gotAllResponses) {
-//          calculateThing()
-//        }
-//
-//      case SupplyStatusResponse(supply) =>
-//        habitatsRepliedSoFar = habitatsRepliedSoFar.+:(supply)
-//        if (gotAllResponses) {
-//          calculateThing()
-//        }
-//    }
-//
+    world.messaging.onReceive {
+      case DemandStatusResponse(cityId, demand) =>
+        citiesRepliedSoFar = citiesRepliedSoFar + (cityId -> demand)
+        if (gotAllResponses) {
+          calculateThing()
+        }
+
+      case SupplyStatusResponse(supply) =>
+        habitatsRepliedSoFar = habitatsRepliedSoFar.+:(supply)
+        if (gotAllResponses) {
+          calculateThing()
+        }
+    }
+
 //    findCitiesAndHabitats()
 //    step()
   }
