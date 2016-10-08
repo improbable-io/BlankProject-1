@@ -11,7 +11,7 @@ import improbable.unity.fabric.engine.EnginePlatform
 
 class ClientEntityLifeCycleManager(appWorld: AppWorld, logger: Logger) extends WorldApp {
 
-  logger.info("ClientEntityLifeCycleManager started")
+  logger.info("CONNECT CONNECT CONNECT started")
   private var clientIdToEntityIdMap = Map[EngineId, EntityId]()
 
   appWorld.messaging.subscribe {

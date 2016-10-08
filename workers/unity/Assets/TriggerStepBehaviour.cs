@@ -9,7 +9,7 @@ public class TriggerStepBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown(KeyCode.S.ToString()))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             step.Update.TriggerTrigger().FinishAndSend();
         }

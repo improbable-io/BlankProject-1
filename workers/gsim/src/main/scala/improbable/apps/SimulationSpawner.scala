@@ -2,7 +2,7 @@ package improbable.apps
 
 import improbable.behaviours.habitat.PoacherResponse
 import improbable.logging.Logger
-import improbable.natures.{City, Habitat, Poacher}
+import improbable.natures.{City, ElephantRegion, Poacher}
 import improbable.papi.EntityId
 import improbable.papi.world.AppWorld
 import improbable.papi.world.messaging.CustomMsg
@@ -67,7 +67,7 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
   private def spawnHabitats() = {
     SimulationSpawner.defaultHabitats.foreach {
       habitat =>
-        val habitatId = appWorld.entities.spawnEntity(Habitat(new LatLonPosition(habitat._2(0), habitat._2(1)), habitat._1, habitat._2(2).toInt))
+        val habitatId = appWorld.entities.spawnEntity(ElephantRegion(new LatLonPosition(habitat._2(0), habitat._2(1)), habitat._1, habitat._2(2).toInt))
         habitats = habitats + (habitatId -> new LatLonPosition(habitat._2(0), habitat._2(1)))
     }
   }
