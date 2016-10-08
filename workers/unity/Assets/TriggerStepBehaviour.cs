@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Improbable.Collections;
 using Improbable.Player;
 using Improbable.Unity.Visualizer;
 
@@ -11,7 +12,8 @@ public class TriggerStepBehaviour : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            playerControlsWriter.Update.TriggerStep().FinishAndSend();
+            // TODO (jonas): fill in expenditure here
+            playerControlsWriter.Update.TriggerStep(new List<StepData.Expenditure>()).FinishAndSend();
         }
     }
 }

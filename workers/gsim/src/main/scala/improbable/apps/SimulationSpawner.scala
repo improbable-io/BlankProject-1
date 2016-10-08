@@ -14,13 +14,15 @@ import improbable.util.LatLonPosition
 
 case object RequestDemand extends CustomMsg
 
-case class DeadElephants(elephants: Int) extends CustomMsg
-
 case class TriggerPoacher(targetHabitatId: EntityId, targetDemand: Int) extends CustomMsg
 
 case class Expenditure(amount: Int) extends CustomMsg
 
 case object StartOfTurnMoney extends CustomMsg
+
+case class Trade(poacherPosition: LatLonPosition, numberOfElephants: Int) extends CustomMsg
+
+case object Step extends CustomMsg
 
 class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
 
@@ -71,10 +73,24 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
     appWorld.messaging.onReceive {
       case msg@StepRequest(playerId, stepData) =>
         logger.info("step request received " + msg)
-        appWorld.messaging.sendToEntity(playerId, StartOfTurnMoney)
+        sendMoneyToPlayer(playerId)
+        triggerChangeInCityDemand()
+        triggerReproductionInHabitats()
         spendExpenditure(stepData)
         requestDemandsFromCities()
     }
+  }
+
+  def triggerChangeInCityDemand(): Unit = {
+    cities.foreach { case (entityId, _) => appWorld.messaging.sendToEntity(entityId, Step) }
+  }
+
+  def triggerReproductionInHabitats(): Unit = {
+    habitats.foreach { case (entityId, _) => appWorld.messaging.sendToEntity(entityId, Step) }
+  }
+
+  def sendMoneyToPlayer(playerId: EntityId): Unit = {
+    appWorld.messaging.sendToEntity(playerId, StartOfTurnMoney)
   }
 
   def spendExpenditure(stepData: StepData): Unit = {
@@ -116,7 +132,7 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
         logger.info("poacher response " + msg)
         val poacherPosition = poachers(poacherId)
         val nearestCityToPoacher = cities.minBy { case (cityId, position) => position.distanceTo(poacherPosition) }._1
-        appWorld.messaging.sendToEntity(nearestCityToPoacher, DeadElephants(killedElephants))
+        appWorld.messaging.sendToEntity(nearestCityToPoacher, Trade(poacherPosition, killedElephants))
     }
   }
 

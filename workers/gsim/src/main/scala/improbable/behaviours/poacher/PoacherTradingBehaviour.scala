@@ -9,6 +9,7 @@ import improbable.papi.world.World
 import improbable.papi.world.messaging.CustomMsg
 import improbable.papi.worldapp.WorldAppDescriptor
 import improbable.poacher.{Life, PoacherInfoComponent, PoacherInfoComponentWriter}
+import improbable.util.GameSettings
 
 case class PoacherResponse(poacherId: EntityId, killedElephants: Int) extends CustomMsg
 
@@ -24,9 +25,9 @@ class PoacherTradingBehaviour(entity: Entity, world: World, logger: Logger, poac
 
     poacherInfo.bind.activity {
       activity =>
-        if (activity < 10)
+        if (activity < GameSettings.minimumPoacherActivity)
           poacherInfoComponentWriter.update.life(Life.Dead)
-          world.messaging.sendToApp(WorldAppDescriptor.forClass[SimulationSpawner].name, PoacherDead(entity.entityId))
+        world.messaging.sendToApp(WorldAppDescriptor.forClass[SimulationSpawner].name, PoacherDead(entity.entityId))
     }
 
     world.messaging.onReceive {
@@ -44,7 +45,8 @@ class PoacherTradingBehaviour(entity: Entity, world: World, logger: Logger, poac
 
   def poachFromHabitat(habitatId: EntityId, targetDemand: Int): Unit = {
     val poachingActivity = poacherInfoComponentWriter.activity
-    val poachingDemand = Math.min(targetDemand, poachingActivity)
+    // essentially ignoreing targetDemand here
+    val poachingDemand = Math.max(targetDemand, poachingActivity)
     world.messaging.sendToEntity(habitatId, PoachRequest(entity.entityId, poachingDemand))
     logger.info("sent poach request message")
   }

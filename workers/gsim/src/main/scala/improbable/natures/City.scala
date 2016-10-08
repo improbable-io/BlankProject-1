@@ -1,9 +1,10 @@
 package improbable.natures
 
 import improbable.behaviours.city.UpdateDemandBehaviour
-import improbable.city.CityInfoComponent
+import improbable.city.{ArrowData, CityInfoComponent}
 import improbable.corelib.natures.{BaseNature, NatureApplication, NatureDescription}
 import improbable.corelibrary.transforms.TransformNature
+import improbable.math.Vector3d
 import improbable.papi.entity.behaviour.EntityBehaviourDescriptor
 import improbable.util.{GameSettings, LatLonPosition}
 
@@ -17,7 +18,7 @@ object City extends NatureDescription {
 
   def apply(position: LatLonPosition, name: String, demand: Int): NatureApplication = {
     application(
-      states = Seq(CityInfoComponent(name, demand)),
+      states = Seq(CityInfoComponent(name, demand, ArrowData(Vector3d.zero, 0))),
       natures = Seq(BaseNature(GameSettings.cityPrefab), TransformNature(position.convertToVector()))
     )
   }
