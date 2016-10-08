@@ -1,0 +1,6 @@
+package improbable.habitat;
+
+component PopulationComponent {
+  float population = 1;
+  id = 1100;
+}
