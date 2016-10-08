@@ -1,0 +1,7 @@
+package improbable.habitat;
+
+component HabitatInfoComponent {
+  string name = 1;
+  int32 population = 2;
+  id = 1100;
+}

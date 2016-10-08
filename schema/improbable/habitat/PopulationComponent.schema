@@ -1,6 +1,0 @@
-package improbable.habitat;
-
-component PopulationComponent {
-  int32 population = 1;
-  id = 1100;
-}

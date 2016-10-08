@@ -2,3 +2,5 @@
 
 
 1100 PopulationComponent
+1101 CityInfoComponent
+1102 PoacherInfoComponent
