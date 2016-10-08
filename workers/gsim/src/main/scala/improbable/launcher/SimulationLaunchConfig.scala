@@ -1,6 +1,6 @@
 package improbable.launcher
 
-import improbable.apps.{ClientEntityLifeCycleManager, MapSpawner}
+import improbable.apps.{ClientEntityLifeCycleManager, MapSpawner, SimulationSpawner}
 import improbable.bridgesettings.{UnityClientBridgeSettings, UnityFSimBridgeSettings}
 import improbable.dapi.LaunchConfig
 import improbable.fapi.bridge.CompositeBridgeSettingsResolver
@@ -23,6 +23,7 @@ object AutomaticWorkerStartup extends SimulationLaunchConfigWithApps(dynamically
 class SimulationLaunchConfigWithApps(dynamicallySpoolUpWorkers: Boolean) extends
   SimulationLaunchConfig(appsToStart = Seq(
     classOf[ClientEntityLifeCycleManager],
+    classOf[SimulationSpawner],
     classOf[MapSpawner]),
     dynamicallySpoolUpWorkers)
 
