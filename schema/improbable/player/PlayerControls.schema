@@ -1,0 +1,14 @@
+package improbable.player;
+
+type StepData {
+  type Expenditure {
+    EntityId target = 1;
+    int32 amount = 2;
+  }
+  list<Expenditure> expenditures = 1;
+}
+
+component PlayerControls {
+  event StepData step;
+  id = 1002;
+}

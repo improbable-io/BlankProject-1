@@ -1,9 +1,0 @@
-package improbable.player;
-
-type TriggerStep {}
-
-component PlayerControls {
-  event TriggerStep
-      step;
-  id = 1002;
-}

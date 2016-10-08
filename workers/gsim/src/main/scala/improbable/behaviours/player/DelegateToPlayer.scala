@@ -1,4 +1,4 @@
-package improbable.behaviours
+package improbable.behaviours.player
 
 import improbable.corelib.util.EntityOwnerDelegation.entityOwnerDelegation
 import improbable.corelibrary.transforms.TransformInterface

@@ -1,14 +1,14 @@
 package improbable.natures
 
-import improbable.behaviours.{DelegateToPlayer, StepBehaviour}
+import improbable.behaviours.player.{DelegateToPlayer, PlayerControlsBehaviour, TrackMoneyBehaviour}
 import improbable.corelib.natures.{BaseNature, NatureApplication, NatureDescription}
 import improbable.corelib.util.EntityOwner
 import improbable.corelibrary.transforms.TransformNature
 import improbable.math.Vector3d
 import improbable.papi.engine.EngineId
-import improbable.papi.entity.EntityPrefab
 import improbable.papi.entity.behaviour.EntityBehaviourDescriptor
-import improbable.player.{LocalPlayerCheck, PlayerControls}
+import improbable.player.{LocalPlayerCheck, PlayerControls, PlayerInfo}
+import improbable.util.GameSettings
 
 object Player extends NatureDescription {
 
@@ -16,13 +16,14 @@ object Player extends NatureDescription {
 
   override def activeBehaviours: Set[EntityBehaviourDescriptor] = Set(
     descriptorOf[DelegateToPlayer],
-    descriptorOf[StepBehaviour]
+    descriptorOf[PlayerControlsBehaviour],
+    descriptorOf[TrackMoneyBehaviour]
   )
 
   def apply(clientId: EngineId): NatureApplication = {
     application(
-      states = Seq(EntityOwner(Some(clientId)), LocalPlayerCheck(), PlayerControls()),
-      natures = Seq(BaseNature(EntityPrefab("Player")), TransformNature(Vector3d(0, 5, 0)))
+      states = Seq(EntityOwner(Some(clientId)), LocalPlayerCheck(), PlayerControls(), PlayerInfo(GameSettings.initialMoney)),
+      natures = Seq(BaseNature(GameSettings.playerPrefab), TransformNature(Vector3d.zero))
     )
   }
 }

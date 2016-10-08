@@ -1,6 +1,14 @@
 package improbable.poacher;
 
+enum Life {
+  Living = 0;
+  Dead = 1;
+}
+
+
 component PoacherInfoComponent {
   string name = 1;
+  int32 activity = 2;
+  Life life = 3;
   id = 1102;
 }

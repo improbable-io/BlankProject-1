@@ -1,12 +1,11 @@
 package improbable.natures
 
-import improbable.behaviours.PoacherTradingBehaviour
+import improbable.behaviours.poacher.PoacherTradingBehaviour
 import improbable.corelib.natures.{BaseNature, NatureApplication, NatureDescription}
 import improbable.corelibrary.transforms.TransformNature
-import improbable.papi.entity.EntityPrefab
 import improbable.papi.entity.behaviour.EntityBehaviourDescriptor
-import improbable.poacher.PoacherInfoComponent
-import improbable.util.LatLonPosition
+import improbable.poacher.{Life, PoacherInfoComponent}
+import improbable.util.{GameSettings, LatLonPosition}
 
 object Poacher extends NatureDescription {
 
@@ -18,8 +17,8 @@ object Poacher extends NatureDescription {
 
   def apply(position: LatLonPosition): NatureApplication = {
     application(
-      states = Seq(PoacherInfoComponent("")),
-      natures = Seq(BaseNature(EntityPrefab("Poacher")), TransformNature(position.convertToVector()))
+      states = Seq(PoacherInfoComponent("Morrison", GameSettings.initialPoacherActivity, Life.Living)),
+      natures = Seq(BaseNature(GameSettings.poacherPrefab), TransformNature(position.convertToVector()))
     )
   }
 }

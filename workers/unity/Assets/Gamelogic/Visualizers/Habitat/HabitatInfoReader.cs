@@ -13,7 +13,6 @@ namespace Assets.Gamelogic.Visualizers.Habitat {
 		void OnEnable()
 		{
 			Name = habitatInfoComponentReader.Name;
-            Debug.Log("Name:" + Name);
 			habitatInfoComponentReader.PopulationUpdated += OnPopulationUpdated;
 		}
 
