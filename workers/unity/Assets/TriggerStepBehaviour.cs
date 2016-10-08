@@ -5,13 +5,13 @@ using Improbable.Unity.Visualizer;
 
 public class TriggerStepBehaviour : MonoBehaviour
 {
-    [Require] private StepWriter step;
+    [Require] private PlayerControlsWriter playerControlsWriter;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            step.Update.TriggerTrigger().FinishAndSend();
+            playerControlsWriter.Update.TriggerTriggerStep().FinishAndSend();
         }
     }
 }

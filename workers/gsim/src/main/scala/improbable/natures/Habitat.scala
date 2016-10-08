@@ -7,7 +7,7 @@ import improbable.papi.entity.EntityPrefab
 import improbable.papi.entity.behaviour.EntityBehaviourDescriptor
 import improbable.util.LatLonPosition
 
-object ElephantRegion extends NatureDescription {
+object Habitat extends NatureDescription {
 
   override val dependencies = Set[NatureDescription](BaseNature, TransformNature)
 

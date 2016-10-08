@@ -2,6 +2,6 @@ package improbable.city;
 
 component CityInfoComponent {
   string name = 1;
-  float demand = 2;
+  int32 demand = 2;
   id = 1101;
 }

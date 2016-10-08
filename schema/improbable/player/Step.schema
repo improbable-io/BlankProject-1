@@ -1,8 +1,9 @@
 package improbable.player;
 
-type Trigger {}
+type TriggerStep {}
 
-component Step{
-  event Trigger trigger;
+component PlayerControls {
+  event TriggerStep
+      step;
   id = 1002;
 }

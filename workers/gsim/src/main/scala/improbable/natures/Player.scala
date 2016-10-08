@@ -8,7 +8,7 @@ import improbable.math.Vector3d
 import improbable.papi.engine.EngineId
 import improbable.papi.entity.EntityPrefab
 import improbable.papi.entity.behaviour.EntityBehaviourDescriptor
-import improbable.player.{LocalPlayerCheck, Step}
+import improbable.player.{LocalPlayerCheck, PlayerControls}
 
 object Player extends NatureDescription {
 
@@ -21,7 +21,7 @@ object Player extends NatureDescription {
 
   def apply(clientId: EngineId): NatureApplication = {
     application(
-      states = Seq(EntityOwner(Some(clientId)), LocalPlayerCheck(), Step()),
+      states = Seq(EntityOwner(Some(clientId)), LocalPlayerCheck(), PlayerControls()),
       natures = Seq(BaseNature(EntityPrefab("Player")), TransformNature(Vector3d(0, 5, 0)))
     )
   }
