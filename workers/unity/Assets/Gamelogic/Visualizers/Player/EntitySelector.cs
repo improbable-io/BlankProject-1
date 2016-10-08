@@ -7,12 +7,12 @@ namespace Assets.Gamelogic.Visualizers.Player
 	{
 		public Camera PlayerCamera;
 		public GameObject CurrentSelection;
-		public Text UiText;
+		public GameObject UiText;
 
 		void OnEnable()
 		{
 			PlayerCamera = GetComponentInChildren<Camera>();
-			UiText = FindObjectOfType(Text);
+			UiText = GameObject.Find("UiText");
 		}
 
 		void Update () 
@@ -50,7 +50,11 @@ namespace Assets.Gamelogic.Visualizers.Player
 
 			if (UiText != null) 
 			{
-				UiText.text = "Selected: " + entity.EntityId + "Type: " + entity.tag;
+				UiText.GetComponent<Text>().text = "Selected: " + entity.name;
+			}
+			else 
+			{
+				Debug.LogError("UiText is null");
 			}
 		}
 
