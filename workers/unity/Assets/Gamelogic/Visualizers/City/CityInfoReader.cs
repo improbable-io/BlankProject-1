@@ -19,9 +19,13 @@ namespace Assets.Gamelogic.Visualizers.City
         public GameObject ModelPrefab;
 	    public GameObject ModelInstance;
 	    public GameObject TooltipPrefab;
+	    public float Ticktime = 0f;
+	    public float TickIntervall = 5f;
+        public GameObject ElephantPrefab;
 
-		void OnEnable() 
+        void OnEnable() 
 		{
+            ElephantPrefab = Resources.Load<GameObject>("Models/elephant/sav_elephant");
             ArrowPrefab = Resources.Load<GameObject>("Models/BlueCube");
             ModelPrefab = Resources.Load<GameObject>("Models/HexTiles/Tile_City02");
             ModelInstance = (GameObject)Instantiate(ModelPrefab, transform.position, Quaternion.identity);
@@ -51,6 +55,19 @@ namespace Assets.Gamelogic.Visualizers.City
                 GameObject TooltipInstance = (GameObject)Instantiate(TooltipPrefab, transform.position, Quaternion.identity);
                 TooltipInstance.GetComponentInChildren<TextMesh>().text = Name;
             }
+
+            Ticktime += Time.deltaTime;
+            if (Ticktime >= TickIntervall)
+            {
+                Ticktime -= TickIntervall;
+                if (ArrowInstance)
+                {
+                    GameObject ElephantTraveller = (GameObject)Instantiate(ElephantPrefab, ArrowData.startingPosition.ToUnityVector(), Quaternion.identity);
+                    ElephantTraveller.transform.localScale = Vector3.one * 0.5f * ArrowData.amount;
+                    Traveller t = ElephantTraveller.AddComponent<Traveller>();
+                    t.destination = transform.position;
+                }
+            }
         }
 
         void OnDemandUpdated(int d)
@@ -66,6 +83,7 @@ namespace Assets.Gamelogic.Visualizers.City
 
 	    void OnArrowDataUpdated(ArrowData a)
 	    {
+	        ArrowData = a;
             if (ArrowInstance)
             {
                 Destroy(ArrowInstance);
