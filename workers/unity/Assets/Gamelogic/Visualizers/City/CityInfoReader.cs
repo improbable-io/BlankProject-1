@@ -15,6 +15,7 @@ namespace Assets.Gamelogic.Visualizers.City
 	    public ArrowData ArrowData = new ArrowData(Vector3d.ZERO, 0f);
         public GameObject ArrowPrefab;
         public GameObject ArrowInstance;
+	    private GameObject ArrowTooltip;
         public GameObject ModelPrefab;
 	    public GameObject ModelInstance;
 	    public GameObject TooltipPrefab;
@@ -68,6 +69,7 @@ namespace Assets.Gamelogic.Visualizers.City
             if (ArrowInstance)
             {
                 Destroy(ArrowInstance);
+                Destroy(ArrowTooltip);
             }
             if (a.Amount > 0f)
             {
@@ -75,7 +77,14 @@ namespace Assets.Gamelogic.Visualizers.City
 	            ArrowInstance = (GameObject)Instantiate(ArrowPrefab, transform.position + 0.5f*(a.startingPosition.ToUnityVector() - transform.position), Quaternion.identity);
 	            ArrowInstance.transform.localScale = new Vector3((transform.position - a.startingPosition.ToUnityVector()).magnitude, 2f, a.amount);
 	            ArrowInstance.transform.rotation = Quaternion.Euler(0f, GetArrowAngle(transform.position, a.startingPosition.ToUnityVector()), 0f);
-	        }
+
+                if (!TooltipPrefab)
+                {
+                    TooltipPrefab = Resources.Load<GameObject>("Models/Tooltip");
+                }
+                ArrowTooltip = (GameObject)Instantiate(TooltipPrefab, ArrowInstance.transform.position, ArrowInstance.transform.rotation);
+                ArrowTooltip.GetComponentInChildren<TextMesh>().text = "Amount: " + a.amount;
+            }
 	    }
 
 	    float GetArrowAngle(Vector3 a, Vector3 b)
