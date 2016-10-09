@@ -142,7 +142,7 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
   def listenToDeadPoachers() = {
     appWorld.messaging.onReceive {
       case msg@PoacherDead(poacherId) =>
-        poachers = poachers - poacherId
+       // poachers = poachers - poacherId
     }
   }
 }
