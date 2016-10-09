@@ -1,13 +1,13 @@
 package improbable.city;
 
 type ArrowData {
-  Vector3d starting_position = 1;
-  float amount = 2;
+    Vector3d starting_position = 1;
+    float amount = 2;
 }
 
 component CityInfoComponent {
   string name = 1;
   int32 demand = 2;
-  ArrowData arrow_data = 3;
+  list<ArrowData> arrows = 3;
   id = 1101;
 }

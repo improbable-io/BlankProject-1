@@ -8,7 +8,7 @@ import improbable.papi.entity.{Entity, EntityBehaviour}
 import improbable.papi.world.World
 import improbable.papi.world.messaging.CustomMsg
 import improbable.papi.worldapp.WorldAppDescriptor
-import improbable.util.{GameSettings, LatLonPosition}
+import improbable.util.GameSettings
 
 case class CityDemand(cityId: EntityId, demand: Int) extends CustomMsg
 
@@ -18,9 +18,9 @@ class UpdateDemandBehaviour(entity: Entity, world: World, logger: Logger, cityIn
 
   override def onReady(): Unit = {
     world.messaging.onReceive {
-      case msg@Trade(poacherPosition, numberOfElephants) =>
-        logger.info("trade received: " + "(" + msg.poacherPosition.getLat + ", " + msg.poacherPosition.getLon + ") " + msg.numberOfElephants)
-        updateArrowData(poacherPosition, numberOfElephants)
+      case msg@Trades(trades) =>
+        logger.info("trade received: " + trades)
+        updateArrowData(trades)
       case RequestDemand =>
         world.messaging.sendToApp(WorldAppDescriptor.forClass[SimulationSpawner].name, CityDemand(entity.entityId, cityInfoComponent.demand.get))
       case Expenditure(amount) =>
@@ -30,8 +30,9 @@ class UpdateDemandBehaviour(entity: Entity, world: World, logger: Logger, cityIn
     }
   }
 
-  def updateArrowData(poacherPosition: LatLonPosition, numberOfElephants: Int): Unit = {
-    cityInfoComponentWriter.update.arrowData(ArrowData(poacherPosition.convertToVector(), numberOfElephants)).finishAndSend()
+  def updateArrowData(trades: List[Trade]): Unit = {
+    val arrowsData = trades.map { trade => ArrowData(trade.poacherPosition.convertToVector(), trade.numberOfElephants) }
+    cityInfoComponentWriter.update.arrows(arrowsData).finishAndSend()
   }
 
   def randomiseDemand() = {

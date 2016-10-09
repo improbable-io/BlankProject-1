@@ -20,7 +20,9 @@ case class Expenditure(amount: Int) extends CustomMsg
 
 case class InvestmentInPlayer(amount: Int) extends CustomMsg
 
-case class Trade(poacherPosition: LatLonPosition, numberOfElephants: Int) extends CustomMsg
+case class Trade(poacherPosition: LatLonPosition, numberOfElephants: Int)
+
+case class Trades(trades: List[Trade]) extends CustomMsg
 
 case object Step extends CustomMsg
 
@@ -31,6 +33,7 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
   var habitats: Map[EntityId, LatLonPosition] = Map.empty
 
   var cityReplies: Map[EntityId, Int] = Map.empty
+  var poacherReplies: Map[EntityId, Int] = Map.empty
 
   spawnSimulation()
   listenToStepRequest()
@@ -136,17 +139,47 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
   def listenToPoacherResponse() = {
     appWorld.messaging.onReceive {
       case msg@PoacherResponse(poacherId, killedElephants) =>
-        val poacherPosition = poachers(poacherId)
-        val nearestCityToPoacher = cities.minBy { case (cityId, position) => position.distanceTo(poacherPosition) }._1
-        appWorld.messaging.sendToEntity(nearestCityToPoacher, Trade(poacherPosition, killedElephants))
+        poacherReplies = poacherReplies + (poacherId -> killedElephants)
+        if (poacherReplies.size == poachers.size) {
+          sendTradesMessages()
+        }
     }
+
+
+  }
+
+  def sendTradesMessages(): Unit = {
+    val poachersToNearestCities = poachers.map {
+      case (poacherId, poacherPosition) =>
+        val closestCity = cities.minBy(_._2.distanceTo(poacherPosition))._1
+        poacherId -> closestCity
+    }
+
+    val citiesToPoachers = cities.keys.map {
+      cityId =>
+        val poachersClosestToCity = poachersToNearestCities.filter(_._2 == cityId).keys.toList
+        cityId -> poachersClosestToCity
+    }.toMap
+
+    citiesToPoachers.foreach {
+      case (cityId, poacherIds) =>
+        val trades = poacherIds.map {
+          poacherId =>
+            val poacherPosition = poachers(poacherId)
+            Trade(poacherPosition, poacherReplies(poacherId))
+        }
+        appWorld.messaging.sendToEntity(cityId, Trades(trades))
+    }
+
+    poacherReplies = Map.empty
+
   }
 
   def listenToDeadPoachers() = {
     appWorld.messaging.onReceive {
       case msg@PoacherDead(poacherId) =>
         logger.info("poacher dead received " + msg)
-       poachers = poachers - poacherId
+        poachers = poachers - poacherId
     }
   }
 }
