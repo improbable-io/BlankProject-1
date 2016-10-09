@@ -56,7 +56,7 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
   def spawnPoachers() = {
     SimulationSpawner.initialHabitats.foreach {
       poacher =>
-        val poacherId = appWorld.entities.spawnEntity(Poacher(new LatLonPosition(poacher._2(0), poacher._2(1))))
+        val poacherId = appWorld.entities.spawnEntity(Poacher(new LatLonPosition(poacher._2(0), poacher._2(1)), poacher._1))
         poachers = poachers + (poacherId -> new LatLonPosition(poacher._2(0), poacher._2(1)))
     }
   }

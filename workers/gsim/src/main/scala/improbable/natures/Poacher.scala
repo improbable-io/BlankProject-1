@@ -15,9 +15,9 @@ object Poacher extends NatureDescription {
     descriptorOf[PoacherTradingBehaviour]
   )
 
-  def apply(position: LatLonPosition): NatureApplication = {
+  def apply(position: LatLonPosition, name: String): NatureApplication = {
     application(
-      states = Seq(PoacherInfoComponent("Morrison", GameSettings.initialPoacherActivity, Life.Living)),
+      states = Seq(PoacherInfoComponent("Poachers: " + name, GameSettings.initialPoacherActivity, Life.Living)),
       natures = Seq(BaseNature(GameSettings.poacherPrefab, isPhysical = false), TransformNature(position.convertToVector()))
     )
   }

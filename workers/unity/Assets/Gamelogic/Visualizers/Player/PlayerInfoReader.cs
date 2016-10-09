@@ -9,6 +9,7 @@ namespace Assets.Gamelogic.Visualizers.Player
     {
         [Require] private PlayerInfoComponentReader playerInfoComponentReader;
         public int Money;
+        public int TempExpenses = 0;
 
         void OnEnable()
         {

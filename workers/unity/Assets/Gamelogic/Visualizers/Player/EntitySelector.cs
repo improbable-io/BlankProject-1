@@ -44,12 +44,13 @@ namespace Assets.Gamelogic.Visualizers.Player
 					        SelectCurrent(newSelection);
 					    } 
                     }
-					else
-					{
-                        DeselectCurrent();
-                    }
 				}
 			}
+		    if (Input.GetMouseButtonDown(1))
+		    {
+                DeselectCurrent();
+            }
+
 		    UpdateSelectionText();
 		}
 
@@ -92,7 +93,7 @@ namespace Assets.Gamelogic.Visualizers.Player
                         PoacherInfoReader poacherInfoReader = CurrentSelection.GetComponent<PoacherInfoReader>();
 			            if (poacherInfoReader)
 			            {
-                            UiTextField.text += poacherInfoReader.Name;
+                            UiTextField.text += poacherInfoReader.Name + "\nActivity: " + poacherInfoReader.Activity;
                         }
 			            break;
                     case "City":

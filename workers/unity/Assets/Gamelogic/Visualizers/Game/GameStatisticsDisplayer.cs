@@ -42,9 +42,9 @@ namespace Assets.Gamelogic.Visualizers.Game
             GameText.text = "";
             if (PlayerInfoReader != null)
             {
-                GameText.text += "Funds: £" + PlayerInfoReader.Money + "\n";
+                GameText.text += "Funds: £ " + PlayerInfoReader.Money + ((PlayerInfoReader.TempExpenses == 0) ? "" : (" - " + PlayerInfoReader.TempExpenses)) + "\n";
             }
-            GameText.text += "Elephants: " + AggregatedPopulation;
+            GameText.text += "Total Elephants: " + AggregatedPopulation;
         }
 
         public void Subscribe(string habitatName, HabitatInfoReader habitatInfoReader)
