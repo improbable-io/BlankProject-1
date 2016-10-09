@@ -40,6 +40,8 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
 
   def spawnSimulation(): Unit = {
     logger.info("spawning simulation")
+    appWorld.entities.spawnEntity(improbable.natures.Map())
+    logger.info("Spawned map")
     spawnCities()
     spawnPoachers()
     spawnHabitats()
@@ -131,7 +133,6 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
   def listenToPoacherResponse() = {
     appWorld.messaging.onReceive {
       case msg@PoacherResponse(poacherId, killedElephants) =>
-        logger.info("poacher response " + msg)
         val poacherPosition = poachers(poacherId)
         val nearestCityToPoacher = cities.minBy { case (cityId, position) => position.distanceTo(poacherPosition) }._1
         appWorld.messaging.sendToEntity(nearestCityToPoacher, Trade(poacherPosition, killedElephants))

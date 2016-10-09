@@ -97,6 +97,7 @@ namespace Assets.Gamelogic.Visualizers.Player
         {
             playerControlsWriter.Update.TriggerStep(ConvertExpenditures()).FinishAndSend();
             TempExpenditures = new Dictionary<EntityId, int>();
+            playerInfoReader.TempExpenses = 0;
         }
 
         global::Improbable.Collections.List<StepData.Expenditure> ConvertExpenditures()
