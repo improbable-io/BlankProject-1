@@ -4,11 +4,13 @@ import improbable.math.Vector3d
 
 class LatLonPosition(lat: Double, lon: Double) {
 
-  private val xFudgeFactor = 600 / 90
-  private val yFudgeFactor = 400 / 90
+  private val xFudgeFactor = 6f
+  private val yFudgeFactor = 6f
+  private val xOffset = -5f
+  private val yOffset = -105f
 
   def convertToVector(): Vector3d = {
-    Vector3d(xFudgeFactor * lon, 0, yFudgeFactor * lat)
+    Vector3d(xFudgeFactor * lon + xOffset, 0, yFudgeFactor * lat + yOffset)
   }
 
   def distanceTo(position: LatLonPosition): Double = {

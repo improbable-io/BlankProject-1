@@ -10,8 +10,9 @@ namespace Assets.Gamelogic.Visualizers.Habitat {
 		[Require] private HabitatInfoComponentReader habitatInfoComponentReader;
 		public string Name;
 		public int Population;
+        public GameObject TooltipPrefab;
 
-		void OnEnable()
+        void OnEnable()
 		{
 			Name = habitatInfoComponentReader.Name;
             GameObject gameText = GameObject.Find("GameText");
@@ -31,10 +32,22 @@ namespace Assets.Gamelogic.Visualizers.Habitat {
 			habitatInfoComponentReader.PopulationUpdated -= OnPopulationUpdated;
 		}
 
-		void OnPopulationUpdated(int p)
+        void Update()
+        {
+            // this is done here instead of in OnEnable because spatialos will execute stuff in a weird order sometimes
+            if (!TooltipPrefab)
+            {
+                TooltipPrefab = Resources.Load<GameObject>("Models/Tooltip");
+                GameObject TooltipInstance = (GameObject)Instantiate(TooltipPrefab, transform.position, Quaternion.identity);
+                TooltipInstance.GetComponentInChildren<TextMesh>().text = Name;
+            }
+        }
+
+        void OnPopulationUpdated(int p)
 		{
 			Population = p;
-			transform.localScale = new Vector3 (Population / 1000f, 1f, Population / 1000f);
+            float scale = Mathf.Clamp(Population / 1500f, 20f, 100f);
+            transform.localScale = new Vector3 (scale, 1f, scale);
 		}
 	}
 }

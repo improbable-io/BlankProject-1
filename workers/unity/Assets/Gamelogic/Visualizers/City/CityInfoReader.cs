@@ -12,6 +12,7 @@ namespace Assets.Gamelogic.Visualizers.City
 		public float Demand;
 	    public GameObject ModelPrefab;
 	    public GameObject ModelInstance;
+	    public GameObject TooltipPrefab;
 
 		void OnEnable() 
 		{
@@ -32,10 +33,21 @@ namespace Assets.Gamelogic.Visualizers.City
 		    CityInfoComponentReader.DemandUpdated -= OnDemandUpdated;
 		}
 
-		void OnDemandUpdated(int d)
+        void Update()
+        {
+            // this is done here instead of in OnEnable because spatialos will execute stuff in a weird order sometimes
+            if (!TooltipPrefab)
+            {
+                TooltipPrefab = Resources.Load<GameObject>("Models/Tooltip");
+                GameObject TooltipInstance = (GameObject)Instantiate(TooltipPrefab, transform.position, Quaternion.identity);
+                TooltipInstance.GetComponentInChildren<TextMesh>().text = Name;
+            }
+        }
+
+        void OnDemandUpdated(int d)
 		{
 			Demand = d;
-		    float scale = Mathf.Clamp(Demand*2f, 10f, 100f);
+		    float scale = Mathf.Clamp(Demand*2f, 14f, 100f);
 			transform.localScale = new Vector3 (scale, 2f, scale);
 		    if (ModelInstance)
 		    {
