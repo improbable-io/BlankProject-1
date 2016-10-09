@@ -10,7 +10,7 @@ import improbable.papi.world.AppWorld
 import improbable.papi.world.messaging.CustomMsg
 import improbable.papi.worldapp.WorldApp
 import improbable.player.StepData
-import improbable.util.LatLonPosition
+import improbable.util.{GameSettings, LatLonPosition}
 
 case object RequestDemand extends CustomMsg
 
@@ -18,7 +18,7 @@ case class TriggerPoacher(targetHabitatId: EntityId, targetDemand: Int) extends 
 
 case class Expenditure(amount: Int) extends CustomMsg
 
-case object StartOfTurnMoney extends CustomMsg
+case class InvestmentInPlayer(amount: Int) extends CustomMsg
 
 case class Trade(poacherPosition: LatLonPosition, numberOfElephants: Int) extends CustomMsg
 
@@ -75,7 +75,7 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
     appWorld.messaging.onReceive {
       case msg@StepRequest(playerId, stepData) =>
         logger.info("step request received " + msg)
-        sendMoneyToPlayer(playerId)
+        sendMoneyToPlayer(msg)
         triggerChangeInCityDemand()
         triggerReproductionInHabitats()
         spendExpenditure(stepData)
@@ -91,8 +91,8 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
     habitats.foreach { case (entityId, _) => appWorld.messaging.sendToEntity(entityId, Step) }
   }
 
-  def sendMoneyToPlayer(playerId: EntityId): Unit = {
-    appWorld.messaging.sendToEntity(playerId, StartOfTurnMoney)
+  def sendMoneyToPlayer(stepRequest: StepRequest): Unit = {
+    appWorld.messaging.sendToEntity(stepRequest.playerId, InvestmentInPlayer(GameSettings.moneyPerTurn - stepRequest.step.expenditures.map(_.amount).sum))
   }
 
   def spendExpenditure(stepData: StepData): Unit = {
