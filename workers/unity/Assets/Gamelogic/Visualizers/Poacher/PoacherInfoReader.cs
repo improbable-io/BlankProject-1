@@ -13,6 +13,7 @@ namespace Assets.Gamelogic.Visualizers.Poacher {
 	    public Life IsAlive;
         public int LastVal;
         public int Ticker = 0;
+	    public bool ModelsOn = false;
         public GameObject ModelPrefab;
         public GameObject ModelInstance;
 
@@ -42,19 +43,40 @@ namespace Assets.Gamelogic.Visualizers.Poacher {
             Activity = a;
         }
 
+	    void ToggleModels()
+	    {
+	        ModelsOn = !ModelsOn;
+	        if (!ModelsOn && ModelInstance)
+	        {
+                Destroy(ModelInstance);
+            }
+	    }
+
+	    void DrawModel()
+	    {
+	        if (ModelsOn)
+	        {
+	            // this is done here instead of in OnActivityUpdated because spatialos will execute stuff in a weird order sometimes
+	            if (!ModelInstance)
+	            {
+	                ModelInstance = (GameObject) Instantiate(ModelPrefab, transform.position, Quaternion.identity);
+	                ModelInstance.AddComponent<HorizontalRotation>();
+	            }
+	            if (ModelInstance)
+	            {
+	                ModelInstance.transform.localScale = Vector3.one*Activity*0.02f;
+	            }
+	        }
+	    }
+
 	    void Update()
 	    {
-            // this is done here instead of in OnActivityUpdated because spatialos will execute stuff in a weird order sometimes
-            if (!ModelInstance)
-            {
-                ModelInstance = (GameObject)Instantiate(ModelPrefab, transform.position, Quaternion.identity);
-                ModelInstance.AddComponent<HorizontalRotation>();
-            }
-            if (ModelInstance)
-            {
-                ModelInstance.transform.localScale = Vector3.one * Activity * 0.02f;
-            }
-        }
+	        if (Input.GetKeyDown(KeyCode.T))
+	        {
+	            ToggleModels();
+	        }
+	        DrawModel();
+	    }
 
 	    void OnLifeUpdated(Life l)
 	    {
