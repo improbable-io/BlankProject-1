@@ -1,4 +1,5 @@
-﻿using Assets.Gamelogic.Visualizers.Util;
+﻿using System.Collections.Generic;
+using Assets.Gamelogic.Visualizers.Util;
 using UnityEngine;
 using Improbable.City;
 using Improbable.Math;
@@ -14,10 +15,10 @@ namespace Assets.Gamelogic.Visualizers.City
 		public float Demand;
         public float LastVal;
         public int Ticker = 0;
-        public ArrowData ArrowData = new ArrowData(Vector3d.ZERO, 0f);
+        public IList<ArrowData> Arrows = new List<ArrowData>();
         public GameObject ArrowPrefab;
-        public GameObject ArrowInstance;
-	    private GameObject ArrowTooltip;
+        public IList<GameObject> ArrowInstances = new List<GameObject>();
+	    private IList<GameObject> ArrowTooltips = new List<GameObject>();
         public GameObject ModelPrefab;
 	    public GameObject ModelInstance;
 	    public GameObject TooltipPrefab;
@@ -35,8 +36,8 @@ namespace Assets.Gamelogic.Visualizers.City
             
             Name = CityInfoComponentReader.Name;
 			CityInfoComponentReader.DemandUpdated += OnDemandUpdated;
-		    CityInfoComponentReader.ArrowDataUpdated += OnArrowDataUpdated;
-		}
+		    CityInfoComponentReader.ArrowsUpdated += OnArrowsUpdated;
+        }
 
 		void OnDisable()
 		{
@@ -45,7 +46,7 @@ namespace Assets.Gamelogic.Visualizers.City
                 Destroy(ModelInstance);
 		    }
 		    CityInfoComponentReader.DemandUpdated -= OnDemandUpdated;
-            CityInfoComponentReader.ArrowDataUpdated -= OnArrowDataUpdated;
+            CityInfoComponentReader.ArrowsUpdated -= OnArrowsUpdated;
         }
 
         void Update()
@@ -54,18 +55,19 @@ namespace Assets.Gamelogic.Visualizers.City
             if (!TooltipPrefab)
             {
                 TooltipPrefab = Resources.Load<GameObject>("Models/Tooltip");
-                GameObject TooltipInstance = (GameObject)Instantiate(TooltipPrefab, transform.position, Quaternion.identity);
-                TooltipInstance.GetComponentInChildren<TextMesh>().text = Name;
             }
+            GameObject TooltipInstance = (GameObject)Instantiate(TooltipPrefab, transform.position, Quaternion.identity);
+            TooltipInstance.GetComponentInChildren<TextMesh>().text = Name;
 
             Ticktime += Time.deltaTime;
             if (Ticktime >= TickIntervall)
             {
                 Ticktime -= TickIntervall;
-                if (ArrowInstance)
+                foreach (var item in ArrowInstances)
                 {
-                    GameObject ElephantTraveller = (GameObject)Instantiate(ElephantPrefab, ArrowData.startingPosition.ToUnityVector(), Quaternion.identity);
-                    ElephantTraveller.transform.localScale = Vector3.one * 0.5f * ArrowData.amount;
+                    ArrowInfoHolder holder = item.GetComponent<ArrowInfoHolder>();
+                    GameObject ElephantTraveller = (GameObject)Instantiate(ElephantPrefab, holder.dest, Quaternion.identity);
+                    ElephantTraveller.transform.localScale = Vector3.one * 0.5f * holder.amount;
                     Traveller t = ElephantTraveller.AddComponent<Traveller>();
                     t.destination = transform.position;
                 }
@@ -86,27 +88,38 @@ namespace Assets.Gamelogic.Visualizers.City
             }
 		}
 
-	    void OnArrowDataUpdated(ArrowData a)
+	    void OnArrowsUpdated(List<ArrowData> a)
 	    {
-            ArrowData = a;
-            if (ArrowInstance)
+            if (!TooltipPrefab)
             {
-                Destroy(ArrowInstance);
-                Destroy(ArrowTooltip);
+                TooltipPrefab = Resources.Load<GameObject>("Models/Tooltip");
             }
-            if (a.Amount > 0f)
-            {
-                ArrowInstance = (GameObject)Instantiate(ArrowPrefab, transform.position + 0.5f*(a.startingPosition.ToUnityVector() - transform.position), Quaternion.identity);
-	            ArrowInstance.transform.localScale = new Vector3((transform.position - a.startingPosition.ToUnityVector()).magnitude, 2f, a.amount);
-	            ArrowInstance.transform.rotation = Quaternion.Euler(0f, GetArrowAngle(transform.position, a.startingPosition.ToUnityVector()), 0f);
+            Arrows = a;
+	        foreach (var item in ArrowInstances)
+	        {
+	            Destroy(item);
+	        }
+	        foreach (var item in ArrowTooltips)
+	        {
+	            Destroy(item);
+	        }
+	        foreach (var item in a)
+	        {
+                if (item.amount > 0f)
+	            {
+                    GameObject arrow = (GameObject)Instantiate(ArrowPrefab, transform.position + 0.5f * (item.startingPosition.ToUnityVector() - transform.position), Quaternion.identity);
+                    arrow.transform.localScale = new Vector3((transform.position - item.startingPosition.ToUnityVector()).magnitude, 2f, item.amount);
+                    arrow.transform.rotation = Quaternion.Euler(0f, GetArrowAngle(transform.position, item.startingPosition.ToUnityVector()), 0f);
+	                ArrowInfoHolder holder = arrow.GetComponent<ArrowInfoHolder>();
+	                holder.dest = item.startingPosition.ToUnityVector();
+	                holder.amount = item.amount;
+                    ArrowInstances.Add(arrow);
 
-                if (!TooltipPrefab)
-                {
-                    TooltipPrefab = Resources.Load<GameObject>("Models/Tooltip");
+                    GameObject arrowTooltip = (GameObject)Instantiate(TooltipPrefab, arrow.transform.position, arrow.transform.rotation);
+                    arrowTooltip.GetComponentInChildren<TextMesh>().text = "Amount: " + item.amount;
+                    ArrowTooltips.Add(arrowTooltip);
                 }
-                ArrowTooltip = (GameObject)Instantiate(TooltipPrefab, ArrowInstance.transform.position, ArrowInstance.transform.rotation);
-                ArrowTooltip.GetComponentInChildren<TextMesh>().text = "Amount: " + a.amount;
-            }
+	        }
 	    }
 
 	    float GetArrowAngle(Vector3 a, Vector3 b)
