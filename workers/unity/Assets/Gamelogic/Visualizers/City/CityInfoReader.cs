@@ -12,7 +12,9 @@ namespace Assets.Gamelogic.Visualizers.City
 		[Require] public CityInfoComponentReader CityInfoComponentReader;
 		public string Name;
 		public float Demand;
-	    public ArrowData ArrowData = new ArrowData(Vector3d.ZERO, 0f);
+        public float LastVal;
+        public int Ticker = 0;
+        public ArrowData ArrowData = new ArrowData(Vector3d.ZERO, 0f);
         public GameObject ArrowPrefab;
         public GameObject ArrowInstance;
 	    private GameObject ArrowTooltip;
@@ -72,6 +74,9 @@ namespace Assets.Gamelogic.Visualizers.City
 
         void OnDemandUpdated(int d)
 		{
+            Ticker++;
+            LastVal = Demand;
+
             Demand = d;
 		    float scale = Mathf.Clamp(Demand*2f, 14f, 100f);
 			transform.localScale = new Vector3 (scale, 2f, scale);

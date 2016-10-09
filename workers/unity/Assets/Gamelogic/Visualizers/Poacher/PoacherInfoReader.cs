@@ -11,6 +11,8 @@ namespace Assets.Gamelogic.Visualizers.Poacher {
 		public string Name;
 	    public int Activity;
 	    public Life IsAlive;
+        public int LastVal;
+        public int Ticker = 0;
         public GameObject ModelPrefab;
         public GameObject ModelInstance;
 
@@ -35,6 +37,8 @@ namespace Assets.Gamelogic.Visualizers.Poacher {
 
 	    void OnActivityUpdated(int a)
 	    {
+            Ticker++;
+            LastVal = Activity;
             Activity = a;
         }
 

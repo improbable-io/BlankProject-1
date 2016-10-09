@@ -10,6 +10,8 @@ namespace Assets.Gamelogic.Visualizers.Habitat {
 		[Require] private HabitatInfoComponentReader habitatInfoComponentReader;
 		public string Name;
 		public int Population;
+        public int LastVal;
+        public int Ticker = 0;
         public GameObject TooltipPrefab;
 
         void OnEnable()
@@ -44,7 +46,10 @@ namespace Assets.Gamelogic.Visualizers.Habitat {
         }
 
         void OnPopulationUpdated(int p)
-		{
+        {
+            LastVal = Population;
+            Ticker++;
+
 			Population = p;
             float scale = Mathf.Clamp(Population / 1500f, 20f, 100f);
             transform.localScale = new Vector3 (scale, 1f, scale);
@@ -52,5 +57,5 @@ namespace Assets.Gamelogic.Visualizers.Habitat {
             Vector3 clr = Vector3.Lerp(new Vector3(0f, 140f/255f, 4f / 255f), new Vector3(0f, 1f, 80f/255f), t);
             GetComponent<Renderer>().material.color = new Color(clr.x, clr.y, clr.z);
         }
-	}
+    }
 }
