@@ -3,7 +3,7 @@ package improbable.util
 import improbable.papi.entity.EntityPrefab
 
 object GameSettings {
-  val moneyPerTurn = 5000
+  val moneyPerTurn = 1000
   val initialMoney = 25000
   val initialPoacherActivity = 500
   val minimumPoacherActivity = 10 //dies below this amount

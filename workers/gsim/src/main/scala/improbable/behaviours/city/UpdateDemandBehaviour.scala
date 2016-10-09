@@ -19,7 +19,7 @@ class UpdateDemandBehaviour(entity: Entity, world: World, logger: Logger, cityIn
   override def onReady(): Unit = {
     world.messaging.onReceive {
       case msg@Trade(poacherPosition, numberOfElephants) =>
-        logger.info("trade received: " + msg)
+        logger.info("trade received: " + "(" + msg.poacherPosition.getLat + ", " + msg.poacherPosition.getLon + ") " + msg.numberOfElephants)
         updateArrowData(poacherPosition, numberOfElephants)
       case RequestDemand =>
         world.messaging.sendToApp(WorldAppDescriptor.forClass[SimulationSpawner].name, CityDemand(entity.entityId, cityInfoComponent.demand.get))
@@ -40,7 +40,7 @@ class UpdateDemandBehaviour(entity: Entity, world: World, logger: Logger, cityIn
   }
 
   def reduceDemand(amount: Int): Unit = {
-    val newDemand = cityInfoComponentWriter.demand - amount
+    val newDemand = math.min(cityInfoComponentWriter.demand - amount, 0)
     cityInfoComponentWriter.update.demand(newDemand).finishAndSend()
   }
 }

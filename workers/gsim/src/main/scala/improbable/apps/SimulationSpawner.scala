@@ -74,6 +74,9 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
   def listenToStepRequest() = {
     appWorld.messaging.onReceive {
       case msg@StepRequest(playerId, stepData) =>
+        logger.info("")
+        logger.info("NEW TURN")
+        logger.info("")
         logger.info("step request received " + msg)
         sendMoneyToPlayer(msg)
         triggerChangeInCityDemand()
@@ -142,6 +145,7 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
   def listenToDeadPoachers() = {
     appWorld.messaging.onReceive {
       case msg@PoacherDead(poacherId) =>
+        logger.info("poacher dead received " + msg)
        poachers = poachers - poacherId
     }
   }
