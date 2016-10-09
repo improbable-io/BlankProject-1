@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using Assets.Gamelogic.Visualizers.City;
+using Assets.Gamelogic.Visualizers.Habitat;
+using Assets.Gamelogic.Visualizers.Poacher;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Assets.Gamelogic.Visualizers.Player 
@@ -7,12 +10,16 @@ namespace Assets.Gamelogic.Visualizers.Player
 	{
 		public Camera PlayerCamera;
 		public GameObject CurrentSelection;
-		public GameObject UiText;
+		public Text UiTextField;
 
 		void OnEnable()
 		{
 			PlayerCamera = GetComponentInChildren<Camera>();
-			UiText = GameObject.Find("UiText");
+            GameObject UiText = GameObject.Find("UiText");
+		    if (UiText)
+		    {
+                UiTextField = UiText.GetComponent<Text>();
+            }
 		}
 
 		void Update () 
@@ -26,41 +33,49 @@ namespace Assets.Gamelogic.Visualizers.Player
                     if (hit.collider.gameObject.IsEntityObject())
 					{
 						GameObject newSelection = hit.collider.gameObject;
-						if (newSelection != CurrentSelection)
-						{
-                            DeselectCurrent();
-							CurrentSelection = newSelection;
-                            SelectEntity(CurrentSelection);
-						}
-					}
+                        CurrentSelection = newSelection;
+                    }
 					else
 					{
-						DeselectCurrent();
-					}
+                        CurrentSelection = null;
+                    }
 				}
 			}
+		    UpdateSelectionText();
 		}
 
-		void SelectEntity(GameObject entity)
+		void UpdateSelectionText()
 		{
-			if (!entity.IsEntityObject ()) 
+            UiTextField.text = "";
+            if (UiTextField && CurrentSelection)
 			{
-				return;
+			    switch (CurrentSelection.tag)
+			    {
+                    case "Habitat":
+			            HabitatInfoReader habitatInfoReader = CurrentSelection.GetComponent<HabitatInfoReader>();
+			            if (habitatInfoReader)
+			            {
+                            UiTextField.text += habitatInfoReader.Name + "\nPopulation: " + habitatInfoReader.Population;
+                        }
+                        break;
+                    case "Poacher":
+                        PoacherInfoReader poacherInfoReader = CurrentSelection.GetComponent<PoacherInfoReader>();
+			            if (poacherInfoReader)
+			            {
+                            UiTextField.text += poacherInfoReader.Name;
+                        }
+			            break;
+                    case "City":
+			            CityInfoReader cityInfoReader = CurrentSelection.GetComponent<CityInfoReader>();
+                        if (cityInfoReader)
+                        {
+                            UiTextField.text += cityInfoReader.name + "\nDemand: " + cityInfoReader.Demand;
+                        }
+                        break;
+                    default:
+			            break;
+			    }
 			}
-
-			if (UiText != null) 
-			{
-				UiText.GetComponent<Text>().text = "Selected: " + entity.name;
-			}
-			else 
-			{
-				Debug.LogError("UiText is null");
-			}
-		}
-
-		void DeselectCurrent()
-		{
-			CurrentSelection = null;
 		}
 	}
 }

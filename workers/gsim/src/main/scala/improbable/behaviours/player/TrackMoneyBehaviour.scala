@@ -4,10 +4,10 @@ import improbable.apps.StartOfTurnMoney
 import improbable.logging.Logger
 import improbable.papi.entity.{Entity, EntityBehaviour}
 import improbable.papi.world.World
-import improbable.player.PlayerInfoWriter
+import improbable.player.PlayerInfoComponentWriter
 import improbable.util.GameSettings
 
-class TrackMoneyBehaviour(entity: Entity, world: World, logger: Logger, playerInfoWriter: PlayerInfoWriter) extends EntityBehaviour {
+class TrackMoneyBehaviour(entity: Entity, world: World, logger: Logger, playerInfoComponentWriter: PlayerInfoComponentWriter) extends EntityBehaviour {
 
   override def onReady(): Unit = {
     world.messaging.onReceive {
@@ -18,6 +18,6 @@ class TrackMoneyBehaviour(entity: Entity, world: World, logger: Logger, playerIn
   }
 
   def updateBank(): Unit = {
-    playerInfoWriter.update.money(playerInfoWriter.money + GameSettings.moneyPerTurn).finishAndSend()
+    playerInfoComponentWriter.update.money(playerInfoComponentWriter.money + GameSettings.moneyPerTurn).finishAndSend()
   }
 }

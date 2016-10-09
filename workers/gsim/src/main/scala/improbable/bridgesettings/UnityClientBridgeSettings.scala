@@ -14,7 +14,7 @@ object UnityClientBridgeSettings extends BridgeSettingsResolver {
     linkSettings = RakNetLinkSettings(),
     enginePlatform = EnginePlatform.UNITY_CLIENT_ENGINE,
     constraintSatisfier = SatisfyVisual,
-    entityInterestPolicy = AuthoritativeEntityOnly(),
+    entityInterestPolicy = AuthoritativeEntityOnly(40),
     engineLoadPolicy = ConstantEngineLoadPolicy(0.5),
     stateUpdateQos = PerEntityOrderedStateUpdateQos,
     streamingQueryPolicy = TagStreamingQueryPolicy(improbable.natures.Map.name)

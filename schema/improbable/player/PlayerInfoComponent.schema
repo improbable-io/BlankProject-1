@@ -1,0 +1,6 @@
+package improbable.player;
+
+component PlayerInfoComponent {
+  int32 money = 1;
+  id = 1003;
+}

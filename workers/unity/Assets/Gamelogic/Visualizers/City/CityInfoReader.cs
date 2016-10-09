@@ -2,7 +2,8 @@
 using Improbable.City;
 using Improbable.Unity.Visualizer;
 
-namespace Assets.Gamelogic.Visualizers.City {
+namespace Assets.Gamelogic.Visualizers.City
+{
 	public class CityInfoReader : MonoBehaviour {
 
 		[Require] public CityInfoComponentReader CityInfoComponentReader;

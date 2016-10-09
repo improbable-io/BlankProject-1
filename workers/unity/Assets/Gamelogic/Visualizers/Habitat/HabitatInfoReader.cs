@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Gamelogic.Visualizers.Game;
+using UnityEngine;
 using Improbable.Habitat;
 using Improbable.Unity.Visualizer;
 
@@ -13,7 +14,16 @@ namespace Assets.Gamelogic.Visualizers.Habitat {
 		void OnEnable()
 		{
 			Name = habitatInfoComponentReader.Name;
-			habitatInfoComponentReader.PopulationUpdated += OnPopulationUpdated;
+            GameObject gameText = GameObject.Find("GameText");
+            if (gameText)
+            {
+                GameStatisticsDisplayer gameStatisticsDisplayer = gameText.GetComponent<GameStatisticsDisplayer>();
+                if (gameStatisticsDisplayer)
+                {
+                    gameStatisticsDisplayer.Subscribe(this.Name, this);
+                }
+            }
+            habitatInfoComponentReader.PopulationUpdated += OnPopulationUpdated;
 		}
 
 		void OnDisable()
