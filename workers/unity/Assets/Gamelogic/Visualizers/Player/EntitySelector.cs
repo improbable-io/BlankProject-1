@@ -86,21 +86,33 @@ namespace Assets.Gamelogic.Visualizers.Player
 			            HabitatInfoReader habitatInfoReader = CurrentSelection.GetComponent<HabitatInfoReader>();
 			            if (habitatInfoReader)
 			            {
-                            UiTextField.text += habitatInfoReader.Name + "\nPopulation: " + habitatInfoReader.Population;
+			                UiTextField.text += habitatInfoReader.Name + "\n";
+                            UiTextField.text += "Population: " + habitatInfoReader.Population + "\n";
+                            UiTextField.text += (habitatInfoReader.Ticker >= 2) ? "Change: " + (habitatInfoReader.Population - habitatInfoReader.LastVal) + "\n" : "\n";
+                            UiTextField.text += "\n";
+                            UiTextField.text += "Invest in randers here: \n";
                         }
                         break;
                     case "Poacher":
                         PoacherInfoReader poacherInfoReader = CurrentSelection.GetComponent<PoacherInfoReader>();
 			            if (poacherInfoReader)
 			            {
-                            UiTextField.text += poacherInfoReader.Name + "\nActivity: " + poacherInfoReader.Activity;
+                            UiTextField.text += poacherInfoReader.Name + "\n";
+                            UiTextField.text += "Activity: " + poacherInfoReader.Activity + "\n";
+                            UiTextField.text += (poacherInfoReader.Ticker >= 2) ? "Change: " + (poacherInfoReader.Activity - poacherInfoReader.LastVal) + "\n" : "\n";
+                            UiTextField.text += "\n";
+                            UiTextField.text += "Invest in law enforcement here: \n";
                         }
 			            break;
                     case "City":
 			            CityInfoReader cityInfoReader = CurrentSelection.GetComponent<CityInfoReader>();
                         if (cityInfoReader)
                         {
-                            UiTextField.text += cityInfoReader.Name + "\nDemand: " + cityInfoReader.Demand;
+                            UiTextField.text += cityInfoReader.Name + "\n";
+                            UiTextField.text += "Demand: " + cityInfoReader.Demand + "\n";
+                            UiTextField.text += (cityInfoReader.Ticker >= 2) ? "Change: " + (cityInfoReader.Demand - cityInfoReader.LastVal) + "\n" : "\n";
+                            UiTextField.text += "\n";
+                            UiTextField.text += "Invest in PR campaigns here: \n";
                         }
                         break;
                     default:

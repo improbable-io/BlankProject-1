@@ -12,7 +12,9 @@ namespace Assets.Gamelogic.Visualizers.City
 		[Require] public CityInfoComponentReader CityInfoComponentReader;
 		public string Name;
 		public float Demand;
-	    public ArrowData ArrowData = new ArrowData(Vector3d.ZERO, 0f);
+        public float LastVal;
+        public int Ticker = 0;
+        public ArrowData ArrowData = new ArrowData(Vector3d.ZERO, 0f);
         public GameObject ArrowPrefab;
         public GameObject ArrowInstance;
 	    private GameObject ArrowTooltip;
@@ -72,7 +74,10 @@ namespace Assets.Gamelogic.Visualizers.City
 
         void OnDemandUpdated(int d)
 		{
-			Demand = d;
+            Ticker++;
+            LastVal = Demand;
+
+            Demand = d;
 		    float scale = Mathf.Clamp(Demand*2f, 14f, 100f);
 			transform.localScale = new Vector3 (scale, 2f, scale);
 		    if (ModelInstance)
@@ -83,7 +88,7 @@ namespace Assets.Gamelogic.Visualizers.City
 
 	    void OnArrowDataUpdated(ArrowData a)
 	    {
-	        ArrowData = a;
+            ArrowData = a;
             if (ArrowInstance)
             {
                 Destroy(ArrowInstance);
@@ -91,8 +96,7 @@ namespace Assets.Gamelogic.Visualizers.City
             }
             if (a.Amount > 0f)
             {
-                Debug.Log("hoho" + Name + " to " + a.startingPosition.ToUnityVector());
-	            ArrowInstance = (GameObject)Instantiate(ArrowPrefab, transform.position + 0.5f*(a.startingPosition.ToUnityVector() - transform.position), Quaternion.identity);
+                ArrowInstance = (GameObject)Instantiate(ArrowPrefab, transform.position + 0.5f*(a.startingPosition.ToUnityVector() - transform.position), Quaternion.identity);
 	            ArrowInstance.transform.localScale = new Vector3((transform.position - a.startingPosition.ToUnityVector()).magnitude, 2f, a.amount);
 	            ArrowInstance.transform.rotation = Quaternion.Euler(0f, GetArrowAngle(transform.position, a.startingPosition.ToUnityVector()), 0f);
 
