@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1011 &101100000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: knight01_upperBody
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: knight01
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_l_leg_HipSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_l_leg_HipSHJnt/rig01_l_leg_KneeSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_l_leg_HipSHJnt/rig01_l_leg_KneeSHJnt/rig01_l_leg_AnkleSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_l_leg_HipSHJnt/rig01_l_leg_KneeSHJnt/rig01_l_leg_AnkleSHJnt/rig01_l_leg_BallSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_l_leg_HipSHJnt/rig01_l_leg_KneeSHJnt/rig01_l_leg_AnkleSHJnt/rig01_l_leg_BallSHJnt/rig01_l_leg_ToeSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_r_leg_HipSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_r_leg_HipSHJnt/rig01_r_leg_KneeSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_r_leg_HipSHJnt/rig01_r_leg_KneeSHJnt/rig01_r_leg_AnkleSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_r_leg_HipSHJnt/rig01_r_leg_KneeSHJnt/rig01_r_leg_AnkleSHJnt/rig01_r_leg_BallSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_r_leg_HipSHJnt/rig01_r_leg_KneeSHJnt/rig01_r_leg_AnkleSHJnt/rig01_r_leg_BallSHJnt/rig01_r_leg_ToeSHJnt
+    m_Weight: 0
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_01_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_01_01SHJnt/rig01_l_finger_01_02SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_01_01SHJnt/rig01_l_finger_01_02SHJnt/rig01_l_finger_01_03SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_02_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_02_01SHJnt/rig01_l_finger_02_02SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_02_01SHJnt/rig01_l_finger_02_02SHJnt/rig01_l_finger_02_03SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_03_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_03_01SHJnt/rig01_l_finger_03_02SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_03_01SHJnt/rig01_l_finger_03_02SHJnt/rig01_l_finger_03_03SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_04_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_04_01SHJnt/rig01_l_finger_04_02SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_04_01SHJnt/rig01_l_finger_04_02SHJnt/rig01_l_finger_04_03SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_05_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_05_01SHJnt/rig01_l_finger_05_02SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_05_01SHJnt/rig01_l_finger_05_02SHJnt/rig01_l_finger_05_03SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_hand_attachment_01_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_neck_01_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_neck_01_01SHJnt/rig01_base_skull_01_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_01_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_01_01SHJnt/rig01_r_finger_01_02SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_01_01SHJnt/rig01_r_finger_01_02SHJnt/rig01_r_finger_01_03SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_02_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_02_01SHJnt/rig01_r_finger_02_02SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_02_01SHJnt/rig01_r_finger_02_02SHJnt/rig01_r_finger_02_03SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_03_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_03_01SHJnt/rig01_r_finger_03_02SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_03_01SHJnt/rig01_r_finger_03_02SHJnt/rig01_r_finger_03_03SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_04_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_04_01SHJnt/rig01_r_finger_04_02SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_04_01SHJnt/rig01_r_finger_04_02SHJnt/rig01_r_finger_04_03SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_05_01SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_05_01SHJnt/rig01_r_finger_05_02SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_05_01SHJnt/rig01_r_finger_05_02SHJnt/rig01_r_finger_05_03SHJnt
+    m_Weight: 1
+  - m_Path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_hand_attachment_01_01SHJnt
+    m_Weight: 1

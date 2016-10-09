@@ -1,0 +1,1046 @@
+fileFormatVersion: 2
+guid: 87c44aa83ca63cf46bcf1f7e0036f978
+timeCreated: 1452792236
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: rig01_base_skull_01_01SHJnt
+    100002: rig01_l_arm_ClavicleSHJnt
+    100004: rig01_l_arm_ElbowSHJnt
+    100006: rig01_l_arm_ShoulderSHJnt
+    100008: rig01_l_arm_WristSHJnt
+    100010: rig01_l_finger_01_01SHJnt
+    100012: rig01_l_finger_01_02SHJnt
+    100014: rig01_l_finger_01_03SHJnt
+    100016: rig01_l_finger_02_01SHJnt
+    100018: rig01_l_finger_02_02SHJnt
+    100020: rig01_l_finger_02_03SHJnt
+    100022: rig01_l_finger_03_01SHJnt
+    100024: rig01_l_finger_03_02SHJnt
+    100026: rig01_l_finger_03_03SHJnt
+    100028: rig01_l_finger_04_01SHJnt
+    100030: rig01_l_finger_04_02SHJnt
+    100032: rig01_l_finger_04_03SHJnt
+    100034: rig01_l_finger_05_01SHJnt
+    100036: rig01_l_finger_05_02SHJnt
+    100038: rig01_l_finger_05_03SHJnt
+    100040: rig01_l_hand_attachment_01_01SHJnt
+    100042: rig01_l_leg_AnkleSHJnt
+    100044: rig01_l_leg_BallSHJnt
+    100046: rig01_l_leg_HipSHJnt
+    100048: rig01_l_leg_KneeSHJnt
+    100050: rig01_l_leg_ToeSHJnt
+    100052: rig01_MAINSHJnt
+    100054: rig01_neck_01_01SHJnt
+    100056: rig01_r_arm_ClavicleSHJnt
+    100058: rig01_r_arm_ElbowSHJnt
+    100060: rig01_r_arm_ShoulderSHJnt
+    100062: rig01_r_arm_WristSHJnt
+    100064: rig01_r_finger_01_01SHJnt
+    100066: rig01_r_finger_01_02SHJnt
+    100068: rig01_r_finger_01_03SHJnt
+    100070: rig01_r_finger_02_01SHJnt
+    100072: rig01_r_finger_02_02SHJnt
+    100074: rig01_r_finger_02_03SHJnt
+    100076: rig01_r_finger_03_01SHJnt
+    100078: rig01_r_finger_03_02SHJnt
+    100080: rig01_r_finger_03_03SHJnt
+    100082: rig01_r_finger_04_01SHJnt
+    100084: rig01_r_finger_04_02SHJnt
+    100086: rig01_r_finger_04_03SHJnt
+    100088: rig01_r_finger_05_01SHJnt
+    100090: rig01_r_finger_05_02SHJnt
+    100092: rig01_r_finger_05_03SHJnt
+    100094: rig01_r_hand_attachment_01_01SHJnt
+    100096: rig01_r_leg_AnkleSHJnt
+    100098: rig01_r_leg_BallSHJnt
+    100100: rig01_r_leg_HipSHJnt
+    100102: rig01_r_leg_KneeSHJnt
+    100104: rig01_r_leg_ToeSHJnt
+    100106: rig01_ROOTSHJnt
+    100108: //RootNode
+    100110: rig01_spine_01SHJnt
+    100112: rig01_spine_02SHJnt
+    100114: rig01_spine_TopSHJnt
+    400000: rig01_base_skull_01_01SHJnt
+    400002: rig01_l_arm_ClavicleSHJnt
+    400004: rig01_l_arm_ElbowSHJnt
+    400006: rig01_l_arm_ShoulderSHJnt
+    400008: rig01_l_arm_WristSHJnt
+    400010: rig01_l_finger_01_01SHJnt
+    400012: rig01_l_finger_01_02SHJnt
+    400014: rig01_l_finger_01_03SHJnt
+    400016: rig01_l_finger_02_01SHJnt
+    400018: rig01_l_finger_02_02SHJnt
+    400020: rig01_l_finger_02_03SHJnt
+    400022: rig01_l_finger_03_01SHJnt
+    400024: rig01_l_finger_03_02SHJnt
+    400026: rig01_l_finger_03_03SHJnt
+    400028: rig01_l_finger_04_01SHJnt
+    400030: rig01_l_finger_04_02SHJnt
+    400032: rig01_l_finger_04_03SHJnt
+    400034: rig01_l_finger_05_01SHJnt
+    400036: rig01_l_finger_05_02SHJnt
+    400038: rig01_l_finger_05_03SHJnt
+    400040: rig01_l_hand_attachment_01_01SHJnt
+    400042: rig01_l_leg_AnkleSHJnt
+    400044: rig01_l_leg_BallSHJnt
+    400046: rig01_l_leg_HipSHJnt
+    400048: rig01_l_leg_KneeSHJnt
+    400050: rig01_l_leg_ToeSHJnt
+    400052: rig01_MAINSHJnt
+    400054: rig01_neck_01_01SHJnt
+    400056: rig01_r_arm_ClavicleSHJnt
+    400058: rig01_r_arm_ElbowSHJnt
+    400060: rig01_r_arm_ShoulderSHJnt
+    400062: rig01_r_arm_WristSHJnt
+    400064: rig01_r_finger_01_01SHJnt
+    400066: rig01_r_finger_01_02SHJnt
+    400068: rig01_r_finger_01_03SHJnt
+    400070: rig01_r_finger_02_01SHJnt
+    400072: rig01_r_finger_02_02SHJnt
+    400074: rig01_r_finger_02_03SHJnt
+    400076: rig01_r_finger_03_01SHJnt
+    400078: rig01_r_finger_03_02SHJnt
+    400080: rig01_r_finger_03_03SHJnt
+    400082: rig01_r_finger_04_01SHJnt
+    400084: rig01_r_finger_04_02SHJnt
+    400086: rig01_r_finger_04_03SHJnt
+    400088: rig01_r_finger_05_01SHJnt
+    400090: rig01_r_finger_05_02SHJnt
+    400092: rig01_r_finger_05_03SHJnt
+    400094: rig01_r_hand_attachment_01_01SHJnt
+    400096: rig01_r_leg_AnkleSHJnt
+    400098: rig01_r_leg_BallSHJnt
+    400100: rig01_r_leg_HipSHJnt
+    400102: rig01_r_leg_KneeSHJnt
+    400104: rig01_r_leg_ToeSHJnt
+    400106: rig01_ROOTSHJnt
+    400108: //RootNode
+    400110: rig01_spine_01SHJnt
+    400112: rig01_spine_02SHJnt
+    400114: rig01_spine_TopSHJnt
+    7400000: rig01_run_forwards_01
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: <Root Transform>
+    animationImportErrors: 
+    animationImportWarnings: "\nDefault bone length found in this file is different
+      form the one found in the source avatar:\n\t'rig01_spine_TopSHJnt' : position
+      error = 15.673258 mm\n\nInbetween bone default rotation found in this file is
+      different from the one found in the source avatar:\n\t'rig01_spine_02SHJnt'
+      : rotation error = 5.578653 deg\n\nClip 'rig01_run_forwards_01' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation DOF
+      on avatar to improve retargeting quality.\n\t'rig01_l_leg_BallSHJnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'rig01_r_leg_BallSHJnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'rig01_spine_02SHJnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: rig01_run_forwards_01
+      takeName: rig01_run_forwards_01
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: rig01_MAINSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_l_leg_HipSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_l_leg_HipSHJnt/rig01_l_leg_KneeSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_l_leg_HipSHJnt/rig01_l_leg_KneeSHJnt/rig01_l_leg_AnkleSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_l_leg_HipSHJnt/rig01_l_leg_KneeSHJnt/rig01_l_leg_AnkleSHJnt/rig01_l_leg_BallSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_l_leg_HipSHJnt/rig01_l_leg_KneeSHJnt/rig01_l_leg_AnkleSHJnt/rig01_l_leg_BallSHJnt/rig01_l_leg_ToeSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_r_leg_HipSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_r_leg_HipSHJnt/rig01_r_leg_KneeSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_r_leg_HipSHJnt/rig01_r_leg_KneeSHJnt/rig01_r_leg_AnkleSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_r_leg_HipSHJnt/rig01_r_leg_KneeSHJnt/rig01_r_leg_AnkleSHJnt/rig01_r_leg_BallSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_r_leg_HipSHJnt/rig01_r_leg_KneeSHJnt/rig01_r_leg_AnkleSHJnt/rig01_r_leg_BallSHJnt/rig01_r_leg_ToeSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_01_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_01_01SHJnt/rig01_l_finger_01_02SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_01_01SHJnt/rig01_l_finger_01_02SHJnt/rig01_l_finger_01_03SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_02_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_02_01SHJnt/rig01_l_finger_02_02SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_02_01SHJnt/rig01_l_finger_02_02SHJnt/rig01_l_finger_02_03SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_03_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_03_01SHJnt/rig01_l_finger_03_02SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_03_01SHJnt/rig01_l_finger_03_02SHJnt/rig01_l_finger_03_03SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_04_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_04_01SHJnt/rig01_l_finger_04_02SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_04_01SHJnt/rig01_l_finger_04_02SHJnt/rig01_l_finger_04_03SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_05_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_05_01SHJnt/rig01_l_finger_05_02SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_finger_05_01SHJnt/rig01_l_finger_05_02SHJnt/rig01_l_finger_05_03SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_l_arm_ClavicleSHJnt/rig01_l_arm_ShoulderSHJnt/rig01_l_arm_ElbowSHJnt/rig01_l_arm_WristSHJnt/rig01_l_hand_attachment_01_01SHJnt
+        weight: 0
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_neck_01_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_neck_01_01SHJnt/rig01_base_skull_01_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_01_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_01_01SHJnt/rig01_r_finger_01_02SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_01_01SHJnt/rig01_r_finger_01_02SHJnt/rig01_r_finger_01_03SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_02_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_02_01SHJnt/rig01_r_finger_02_02SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_02_01SHJnt/rig01_r_finger_02_02SHJnt/rig01_r_finger_02_03SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_03_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_03_01SHJnt/rig01_r_finger_03_02SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_03_01SHJnt/rig01_r_finger_03_02SHJnt/rig01_r_finger_03_03SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_04_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_04_01SHJnt/rig01_r_finger_04_02SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_04_01SHJnt/rig01_r_finger_04_02SHJnt/rig01_r_finger_04_03SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_05_01SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_05_01SHJnt/rig01_r_finger_05_02SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_finger_05_01SHJnt/rig01_r_finger_05_02SHJnt/rig01_r_finger_05_03SHJnt
+        weight: 1
+      - path: rig01_MAINSHJnt/rig01_ROOTSHJnt/rig01_spine_01SHJnt/rig01_spine_02SHJnt/rig01_spine_TopSHJnt/rig01_r_arm_ClavicleSHJnt/rig01_r_arm_ShoulderSHJnt/rig01_r_arm_ElbowSHJnt/rig01_r_arm_WristSHJnt/rig01_r_hand_attachment_01_01SHJnt
+        weight: 0
+      maskType: 1
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human:
+    - boneName: rig01_ROOTSHJnt
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_leg_HipSHJnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_leg_HipSHJnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_leg_KneeSHJnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_leg_KneeSHJnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_leg_AnkleSHJnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_leg_AnkleSHJnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_spine_01SHJnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_spine_TopSHJnt
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_neck_01_01SHJnt
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_base_skull_01_01SHJnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_arm_ClavicleSHJnt
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_arm_ClavicleSHJnt
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_arm_ShoulderSHJnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_arm_ShoulderSHJnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_arm_ElbowSHJnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_arm_ElbowSHJnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_arm_WristSHJnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_arm_WristSHJnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_leg_ToeSHJnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_leg_ToeSHJnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_02_01SHJnt
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_02_02SHJnt
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_02_03SHJnt
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_01_01SHJnt
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_01_02SHJnt
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_01_03SHJnt
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_03_01SHJnt
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_03_02SHJnt
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_03_03SHJnt
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_04_01SHJnt
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_04_02SHJnt
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_04_03SHJnt
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_05_01SHJnt
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_05_02SHJnt
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_l_finger_05_03SHJnt
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_02_01SHJnt
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_02_02SHJnt
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_02_03SHJnt
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_01_01SHJnt
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_01_02SHJnt
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_01_03SHJnt
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_03_01SHJnt
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_03_02SHJnt
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_03_03SHJnt
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_04_01SHJnt
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_04_02SHJnt
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_04_03SHJnt
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_05_01SHJnt
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_05_02SHJnt
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig01_r_finger_05_03SHJnt
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: knight01(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: knight01
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_MAINSHJnt
+      position: {x: 0, y: 0.027829178, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_ROOTSHJnt
+      position: {x: 0, y: 0.986457, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_leg_HipSHJnt
+      position: {x: -0.12012254, y: -0.058818858, z: -1.0716612e-18}
+      rotation: {x: 0.0046795933, y: -0.0039539044, z: 0.69586897, w: 0.7181426}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_leg_KneeSHJnt
+      position: {x: -0.40024757, y: 3.1974422e-16, z: -1.5543122e-17}
+      rotation: {x: 6.699148e-16, y: -0.06257189, z: -3.4868522e-16, w: 0.9980405}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_leg_AnkleSHJnt
+      position: {x: -0.4338447, y: 4.796163e-16, z: 2.6645352e-17}
+      rotation: {x: 0.00047336423, y: 0.06865579, z: 0.015751101, w: 0.9975159}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_leg_BallSHJnt
+      position: {x: -0.098079555, y: 0.028034363, z: 0.15070681}
+      rotation: {x: 5.542856e-17, y: 0.7071068, z: -5.542856e-17, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_leg_ToeSHJnt
+      position: {x: -0.06708236, y: 3.5527136e-17, z: 4.0106484e-17}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_leg_HipSHJnt
+      position: {x: 0.12012254, y: -0.058818858, z: -1.439604e-18}
+      rotation: {x: 0.003922035, y: -0.004648712, z: 0.7181428, w: 0.6958692}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_leg_KneeSHJnt
+      position: {x: -0.40024757, y: 1.7763568e-17, z: -3.5527136e-17}
+      rotation: {x: 1.8647742e-15, y: -0.06265702, z: 6.224362e-16, w: 0.99803513}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_leg_AnkleSHJnt
+      position: {x: -0.4338447, y: 2.842171e-16, z: -4.352074e-16}
+      rotation: {x: -0.0004738283, y: 0.068686046, z: -0.01575277, w: 0.99751383}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_leg_BallSHJnt
+      position: {x: -0.098079555, y: -0.028034363, z: 0.15070681}
+      rotation: {x: 0.00000021840916, y: 0.70710826, z: 0.0000025785891, w: 0.70710534}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_leg_ToeSHJnt
+      position: {x: -0.06708236, y: 3.5527136e-17, z: 5.0421906e-17}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_spine_01SHJnt
+      position: {x: -0, y: 0.093570724, z: -1.7347234e-20}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_spine_02SHJnt
+      position: {x: -0.093570724, y: 2.0776874e-17, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_spine_TopSHJnt
+      position: {x: -0.093570724, y: 7.888609e-33, z: 1.7347234e-20}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_neck_01_01SHJnt
+      position: {x: -0.2685744, y: -4.2791142e-17, z: 3.8398492e-17}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_base_skull_01_01SHJnt
+      position: {x: -0.0939033, y: -9.1533504e-17, z: -6.15552e-17}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_arm_ClavicleSHJnt
+      position: {x: -0.1657908, y: -0.10023776, z: -0.041778516}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_arm_ShoulderSHJnt
+      position: {x: -0.09590655, y: -0.027467724, z: 4.4408918e-17}
+      rotation: {x: 0.025296988, y: -0.00012757708, z: 0.024381686, w: 0.9993826}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_arm_ElbowSHJnt
+      position: {x: -0.23229873, y: -8.5265126e-16, z: 1.4210854e-16}
+      rotation: {x: -0.0056024464, y: 0.030115617, z: -0.0215217, w: 0.99929905}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_arm_WristSHJnt
+      position: {x: -0.2532247, y: 5.684342e-16, z: 2.842171e-16}
+      rotation: {x: -0.021970322, y: 0.012026903, z: -0.0035750319, w: 0.9996799}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_01_01SHJnt
+      position: {x: -0.0065521793, y: -0.015381142, z: 0.015861358}
+      rotation: {x: 0.5445691, y: -0.1266861, z: 0.2500429, w: 0.7904896}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_01_02SHJnt
+      position: {x: -0.026524471, y: 0.02308585, z: 7.105427e-17}
+      rotation: {x: 0.008215666, y: 0.009438901, z: -0.21193983, w: 0.9772026}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_01_03SHJnt
+      position: {x: -0.040428083, y: 0.009325214, z: -0.0011518049}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_02_01SHJnt
+      position: {x: -0.0959674, y: -0.00031335637, z: 0.034341518}
+      rotation: {x: 0.07812029, y: 0.3781494, z: -0.013531578, w: 0.9223434}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_02_02SHJnt
+      position: {x: -0.03192469, y: 2.842171e-16, z: -6.050716e-17}
+      rotation: {x: 0.0000003920866, y: -0.0000026606126, z: 0.030509623, w: 0.99953455}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_02_03SHJnt
+      position: {x: -0.02791417, y: -6.3948843e-16, z: 3.6415315e-16}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_03_01SHJnt
+      position: {x: -0.095314346, y: 0.0078052394, z: 0.00849948}
+      rotation: {x: 0.06371187, y: 0.020828163, z: -0.023020845, w: 0.99748534}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_03_02SHJnt
+      position: {x: -0.035150137, y: -0.003460161, z: -2.6645352e-17}
+      rotation: {x: -0.000000016763805, y: 0.00000042561436, z: 0.080367714, w: 0.9967653}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_03_03SHJnt
+      position: {x: -0.029590975, y: 1.4210854e-16, z: -7.105427e-17}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_04_01SHJnt
+      position: {x: -0.085866176, y: 0.005898082, z: -0.01719684}
+      rotation: {x: -0.016053533, y: 0.0026942503, z: -0.026106434, w: 0.9995266}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_04_02SHJnt
+      position: {x: -0.03641557, y: -0.003167969, z: -3.1974422e-16}
+      rotation: {x: -0.000000052037624, y: 0.00000022433221, z: -0.06622604, w: 0.99780464}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_04_03SHJnt
+      position: {x: -0.024453253, y: -0.0070462953, z: 3.5527136e-17}
+      rotation: {x: -1.6313677e-15, y: 1.9696047e-16, z: 0.15290534, w: 0.98824084}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_05_01SHJnt
+      position: {x: -0.07712803, y: 5.627498e-13, z: -0.04346978}
+      rotation: {x: -0.05449536, y: 0.013576447, z: -0.0374233, w: 0.9977202}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_05_02SHJnt
+      position: {x: -0.025420984, y: -0.0028967517, z: -1.0658141e-16}
+      rotation: {x: -0.000000052037624, y: 0.00000021210862, z: -0.021552302, w: 0.9997677}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_finger_05_03SHJnt
+      position: {x: -0.0195856, y: -0.0046641487, z: -1.0658141e-16}
+      rotation: {x: -1.2941432e-15, y: -1.6250008e-15, z: 0.2655608, w: 0.9640941}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_l_hand_attachment_01_01SHJnt
+      position: {x: -0.06615047, y: -0.020914745, z: -0.0025712466}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_arm_ClavicleSHJnt
+      position: {x: -0.1657908, y: 0.10023776, z: -0.041778516}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_arm_ShoulderSHJnt
+      position: {x: 0.09590655, y: -0.027467724, z: 1.7763568e-17}
+      rotation: {x: 0.025296988, y: 0.00012757638, z: -0.024381712, w: 0.9993826}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_arm_ElbowSHJnt
+      position: {x: 0.23229873, y: -7.105427e-16, z: 1.2434498e-16}
+      rotation: {x: -0.005602443, y: -0.030115675, z: 0.021521693, w: 0.999299}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_arm_WristSHJnt
+      position: {x: 0.2532247, y: 9.947598e-16, z: 2.4868996e-16}
+      rotation: {x: -0.021970322, y: -0.012026903, z: 0.0035750319, w: 0.9996799}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_01_01SHJnt
+      position: {x: 0.0065521793, y: -0.015381142, z: 0.015861358}
+      rotation: {x: 0.54456943, y: 0.12668581, z: -0.25004324, w: 0.7904892}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_01_02SHJnt
+      position: {x: 0.026524471, y: 0.02308585, z: 4.2632563e-16}
+      rotation: {x: 0.008215336, y: -0.009439068, z: 0.21193983, w: 0.9772026}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_01_03SHJnt
+      position: {x: 0.040428083, y: 0.009325214, z: -0.0011518049}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_02_01SHJnt
+      position: {x: 0.0959674, y: -0.00031335637, z: 0.034341518}
+      rotation: {x: 0.07811917, y: -0.3781491, z: 0.013532293, w: 0.92234355}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_02_02SHJnt
+      position: {x: 0.03192469, y: -1.4210854e-15, z: 1.7041923e-16}
+      rotation: {x: 0.00000017881385, y: 0.0000029643402, z: -0.03050984, w: 0.9995345}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_02_03SHJnt
+      position: {x: 0.02791417, y: 1.4210854e-16, z: 3.2751578e-17}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_03_01SHJnt
+      position: {x: 0.095314346, y: 0.0078052394, z: 0.00849948}
+      rotation: {x: 0.06371204, y: -0.02082806, z: 0.023018744, w: 0.9974854}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_03_02SHJnt
+      position: {x: 0.035150137, y: -0.003460161, z: 1.687539e-16}
+      rotation: {x: -0.000000013504173, y: 0.00000048731437, z: -0.08036189, w: 0.99676585}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_03_03SHJnt
+      position: {x: 0.029590975, y: -1.4210854e-16, z: -9.7699626e-17}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_04_01SHJnt
+      position: {x: 0.085866176, y: 0.005898082, z: -0.01719684}
+      rotation: {x: -0.016053582, y: -0.002694146, z: 0.026105922, w: 0.9995266}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_04_02SHJnt
+      position: {x: 0.03641557, y: -0.003167969, z: 1.2434498e-16}
+      rotation: {x: -0.000000034226094, y: -0.00000027380875, z: 0.06622432, w: 0.99780476}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_04_03SHJnt
+      position: {x: 0.024453253, y: -0.0070462953, z: 1.2434498e-16}
+      rotation: {x: -3.3805823e-16, y: -4.181635e-15, z: -0.15290534, w: 0.98824084}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_05_01SHJnt
+      position: {x: 0.07712803, y: -5.569234e-13, z: -0.04346978}
+      rotation: {x: -0.05449591, y: -0.013576257, z: 0.03742449, w: 0.99772006}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_05_02SHJnt
+      position: {x: 0.025420984, y: -0.0028967517, z: 1.7763568e-17}
+      rotation: {x: -0.000000047613845, y: -0.00000040372814, z: 0.02155231, w: 0.9997677}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_finger_05_03SHJnt
+      position: {x: 0.0195856, y: -0.0046641487, z: -1.4210854e-16}
+      rotation: {x: -1.4362856e-16, y: 4.1922128e-16, z: -0.2655608, w: 0.9640941}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig01_r_hand_attachment_01_01SHJnt
+      position: {x: 0.06615047, y: -0.020914745, z: -0.0025712466}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: rig01_MAINSHJnt
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 3c68286441fc0ef44ab1f497c4f0d676,
+    type: 3}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

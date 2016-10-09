@@ -150,25 +150,25 @@ object SimulationSpawner {
   // Format: Latitude, Longitude, population/demand
 
   val initialHabitats: Map[String, List[Float]] = Map(
-    "Ethiopia" -> List(9.145000f, 40.489673f, 3000f)
-    //    "Uganda" -> List(1.373333f, 32.290275f, 10000f),
-    //    "Kenya" -> List(-0.023559f, 37.906193f, 60000f),
-    //    "Tanzania" -> List(-6.369028f, 34.888822f, 90000f),
-    //    "Zambia" -> List(-13.133897f, 27.849332f, 60000f),
-    //    "Zimbabwe" -> List(-19.015438f, 29.154857f, 110000f),
-    //    "Mozambique" -> List(-18.665695f, 35.529562f, 30000f),
-    //    "Angola" -> List(-11.202692f, 17.873887f, 10000f),
-    //    "Botswana" -> List(-22.328474f, 24.684866f, 100000f),
-    //    "South Africa" -> List(-30.559482f, 22.937506f, 50000f)
+    "Ethiopia" -> List(9.145000f, 40.489673f, 3000f),
+    "Uganda" -> List(1.373333f, 32.290275f, 10000f),
+    "Kenya" -> List(-0.023559f, 37.906193f, 60000f),
+    "Tanzania" -> List(-6.369028f, 34.888822f, 90000f),
+    "Zambia" -> List(-13.133897f, 27.849332f, 60000f),
+    "Zimbabwe" -> List(-19.015438f, 29.154857f, 110000f),
+    "Mozambique" -> List(-18.665695f, 35.529562f, 30000f),
+    "Angola" -> List(-11.202692f, 17.873887f, 10000f),
+    "Botswana" -> List(-22.328474f, 24.684866f, 100000f),
+    "South Africa" -> List(-30.559482f, 22.937506f, 50000f)
   )
 
   val initialCities: Map[String, List[Float]] = Map(
-    "China" -> List(35.861660f, 104.195397f, 36f)
-    //    "Philippines" -> List(12.879721f, 121.774017f, 34f),
-    //    "Thailand" -> List(15.870032f, 100.992541f, 14f),
-    //    "Hongkong" -> List(22.396428f, 114.109497f, 4f),
-    //    "Vietnam" -> List(14.058324f, 108.277199f, 14f),
-    //    "Malaysia" -> List(4.210484f, 101.975766f, 24f),
-    //    "Indonesia" -> List(-0.789275f, 113.921327f, 5f)
+    "China" -> List(35.861660f, 104.195397f, 36f),
+    "Philippines" -> List(12.879721f, 121.774017f, 34f),
+    "Thailand" -> List(15.870032f, 100.992541f, 14f),
+    "Hongkong" -> List(22.396428f, 114.109497f, 4f),
+    "Vietnam" -> List(14.058324f, 108.277199f, 14f),
+    "Malaysia" -> List(4.210484f, 101.975766f, 24f),
+    "Indonesia" -> List(-0.789275f, 113.921327f, 5f)
   )
 }

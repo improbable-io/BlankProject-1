@@ -1,6 +1,7 @@
 ﻿using Assets.Gamelogic.Visualizers.City;
 using Assets.Gamelogic.Visualizers.Habitat;
 using Assets.Gamelogic.Visualizers.Poacher;
+using Assets.Gamelogic.Visualizers.Util;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,12 +56,12 @@ namespace Assets.Gamelogic.Visualizers.Player
 	    void SelectCurrent(GameObject newSelection)
 	    {
             CurrentSelection = newSelection;
-            ArrowInstance = (GameObject)Instantiate(ArrowPrefab, newSelection.transform.position, Quaternion.Euler(90f, 0f, 0f));
-            ArrowInstance.transform.localPosition += new Vector3(0f, 5f, newSelection.transform.localScale.z * 0.5f);
-	        ArrowInstance.transform.localScale *= 10f;
+            ArrowInstance = (GameObject)Instantiate(ArrowPrefab, newSelection.transform.position, Quaternion.identity);
+            ArrowInstance.transform.localScale *= 20f;
+	        ArrowInstance.AddComponent<HorizontalRotation>();
             foreach (Transform childTransform in ArrowInstance.transform)
             {
-                childTransform.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+                childTransform.gameObject.GetComponent<Renderer>().material.color = new Color(40f/255f, 140f/255f, 1f);
             }
         }
 
@@ -98,7 +99,7 @@ namespace Assets.Gamelogic.Visualizers.Player
 			            CityInfoReader cityInfoReader = CurrentSelection.GetComponent<CityInfoReader>();
                         if (cityInfoReader)
                         {
-                            UiTextField.text += cityInfoReader.name + "\nDemand: " + cityInfoReader.Demand;
+                            UiTextField.text += cityInfoReader.Name + "\nDemand: " + cityInfoReader.Demand;
                         }
                         break;
                     default:
