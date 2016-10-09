@@ -11,8 +11,11 @@ namespace Assets.Gamelogic.Visualizers.Player
 		public Camera PlayerCamera;
 		public GameObject CurrentSelection;
 		public Text UiTextField;
+	    public GameObject ArrowPrefab;
+        public GameObject ArrowInstance;
 
-		void OnEnable()
+
+        void OnEnable()
 		{
 			PlayerCamera = GetComponentInChildren<Camera>();
             GameObject UiText = GameObject.Find("UiText");
@@ -20,7 +23,8 @@ namespace Assets.Gamelogic.Visualizers.Player
 		    {
                 UiTextField = UiText.GetComponent<Text>();
             }
-		}
+            ArrowPrefab = Resources.Load<GameObject>("Models/Arrow");
+        }
 
 		void Update () 
 		{
@@ -33,18 +37,43 @@ namespace Assets.Gamelogic.Visualizers.Player
                     if (hit.collider.gameObject.IsEntityObject())
 					{
 						GameObject newSelection = hit.collider.gameObject;
-                        CurrentSelection = newSelection;
+					    if (CurrentSelection != newSelection)
+					    {
+					        DeselectCurrent();
+					        SelectCurrent(newSelection);
+					    } 
                     }
 					else
 					{
-                        CurrentSelection = null;
+                        DeselectCurrent();
                     }
 				}
 			}
 		    UpdateSelectionText();
 		}
 
-		void UpdateSelectionText()
+	    void SelectCurrent(GameObject newSelection)
+	    {
+            CurrentSelection = newSelection;
+            ArrowInstance = (GameObject)Instantiate(ArrowPrefab, newSelection.transform.position, Quaternion.Euler(90f, 0f, 0f));
+            ArrowInstance.transform.localPosition += new Vector3(0f, 5f, newSelection.transform.localScale.z * 0.5f);
+	        ArrowInstance.transform.localScale *= 10f;
+            foreach (Transform childTransform in ArrowInstance.transform)
+            {
+                childTransform.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+            }
+        }
+
+	    void DeselectCurrent()
+	    {
+	        if (ArrowInstance)
+	        {
+                Destroy(ArrowInstance);
+            }
+	        CurrentSelection = null;
+        }
+
+	    void UpdateSelectionText()
 		{
             UiTextField.text = "";
             if (UiTextField && CurrentSelection)
