@@ -125,6 +125,7 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
 
   def messagePoachers(): Unit = {
     logger.info("poachers size: " + poachers.size.toString)
+        if (poachers.size == 0) {
     val demandPerPoacher = cityReplies.values.sum / poachers.size
 
     poachers.foreach {
@@ -133,6 +134,7 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
         appWorld.messaging.sendToEntity(poacherId, TriggerPoacher(nearestHabitatToPoacher, demandPerPoacher))
     }
 
+        }
     cityReplies = Map.empty
   }
 
@@ -166,7 +168,7 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
         val trades = poacherIds.map {
           poacherId =>
             val poacherPosition = poachers(poacherId)
-            Trade(poacherPosition, poacherReplies(poacherId))
+            Trade(poacherPosition, poacherReplies.getOrElse(poacherId, 0))
         }
         appWorld.messaging.sendToEntity(cityId, Trades(trades))
     }
@@ -180,6 +182,7 @@ class SimulationSpawner(appWorld: AppWorld, logger: Logger) extends WorldApp {
       case msg@PoacherDead(poacherId) =>
         logger.info("poacher dead received " + msg)
         poachers = poachers - poacherId
+        poacherReplies = poacherReplies - poacherId
     }
   }
 }

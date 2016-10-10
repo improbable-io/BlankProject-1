@@ -1,4 +1,5 @@
-﻿using Assets.Gamelogic.Visualizers.Util;
+﻿using System;
+using Assets.Gamelogic.Visualizers.Util;
 using UnityEngine;
 using Improbable.Poacher;
 using Improbable.Unity.Visualizer;
@@ -64,7 +65,8 @@ namespace Assets.Gamelogic.Visualizers.Poacher {
 	            }
 	            if (ModelInstance)
 	            {
-	                ModelInstance.transform.localScale = Vector3.one*Activity*0.02f;
+	                var scale = Mathf.Clamp(Activity*0.02f, 5f, 20f);
+	                ModelInstance.transform.localScale = Vector3.one * scale;
 	            }
 	        }
 	    }

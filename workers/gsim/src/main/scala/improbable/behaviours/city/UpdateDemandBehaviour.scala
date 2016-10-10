@@ -36,12 +36,13 @@ class UpdateDemandBehaviour(entity: Entity, world: World, logger: Logger, cityIn
   }
 
   def randomiseDemand() = {
-    val newDemand = (cityInfoComponentWriter.demand + scala.util.Random.nextGaussian() * GameSettings.demandRandomisationSD * cityInfoComponentWriter.demand).toInt
+    val randomDemand = (cityInfoComponentWriter.demand + scala.util.Random.nextGaussian() * GameSettings.demandRandomisationSD * cityInfoComponentWriter.demand).toInt
+    val newDemand = math.max(randomDemand, 0)
     cityInfoComponentWriter.update.demand(newDemand).finishAndSend()
   }
 
   def reduceDemand(amount: Int): Unit = {
-    val newDemand = math.min(cityInfoComponentWriter.demand - amount, 0)
+    val newDemand = math.max(cityInfoComponentWriter.demand - amount, 0)
     cityInfoComponentWriter.update.demand(newDemand).finishAndSend()
   }
 }
